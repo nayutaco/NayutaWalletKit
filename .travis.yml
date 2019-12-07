@@ -141,7 +141,3 @@ jobs:
 
       script:
         - mocha tests.js
-
-notifications:
-  email:
-    - chris@nayuta.io

@@ -1,4 +1,4 @@
-# Nayuta Wallet
+# NayutaWalletKit
 
 Developed using Appcelerator Titanium Alloy SDK with custom native iOS and Java libraries.
 
