@@ -109,3 +109,5 @@ Goolge drive linking won't work as you would need to register the app your self 
 # License
 
 The source code of NayutaWalletKit can be freely modified and redistributed under the [Apache License, Version 2.0](https://github.com/NayutaWalletKit/NayutaWalletKit/blob/master/LICENSE), excluding Nayuta (our name), Nayuta Wallet (the app name), Nayuta logo and trademark.
+
+a
