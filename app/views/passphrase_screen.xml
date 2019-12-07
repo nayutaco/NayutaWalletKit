@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win" onPostlayout="didLoad">
+      <View id="mainView" class="mainView">
+			<View platform="android" class="overlay" /> 
+		 
+         <ActivityIndicator id="loadingSpinner" accessibilityLabel="loadingSpinner"/>
+         <ScrollableView id="scrollView">
+            <View id="page1">
+               <Label id="description">L('passphrase_description')</Label> 
+               <View class="buttons">   
+                  <Widget src="co.nayuta.button" id="firstButton"  class="aButton nextButton" accessibilityLabel="Passphrase Next 1" text="L('next')"/> 
+               </View>
+            </View>
+            <View id="page2">
+               <Label class="pageNo">1/3</Label>
+               <View class="pageBack"/>
+               <View class="pageInner" layout="vertical" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+                  <View class="row">
+                     <View class="column">
+                        <Label class="word wordTop" id="word1" />
+                        <Label class="word" id="word3" />
+                        <Label class="word" id="word5" />
+                        <Label class="word" id="word7" />
+                     </View>
+                     <View class="column rightCol">
+                        <Label class="word  wordTop" id="word2" />
+                        <Label class="word" id="word4" />
+                        <Label class="word" id="word6" />
+                        <Label class="word" id="word8" />
+                     </View>
+                  </View>
+               </View>
+               <View class="buttons" >   
+                <Widget src="co.nayuta.button" class="aButton nextButton"  accessibilityLabel="Passphrase Next 2"  id="secondButton" text="L('next')"/>  
+               </View>
+            </View>
+            <View id="page3">
+               <Label class="pageNo">2/3</Label>
+               <View class="pageBack"/>
+               <View class="pageInner" layout="vertical" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+                  <View class="row">
+                     <View class="column">
+                        <Label class="word  wordTop" id="word9" />
+                        <Label class="word" id="word11" />
+                        <Label class="word" id="word13" />
+                        <Label class="word" id="word15" />
+                     </View>
+                     <View class="column rightCol">
+                        <Label class="word  wordTop" id="word10" />
+                        <Label class="word" id="word12" />
+                        <Label class="word" id="word14" />
+                        <Label class="word" id="word16" />
+                     </View>
+                  </View>
+               </View>
+               <View class="buttons"   > 
+                   <Widget src="co.nayuta.button" class="aButton" id="goTo2Button" text="L('back')"/>  
+                     <View height="Ti.UI.SIZE" width="Ti.UI.SIZE" accessibilityLabel="Passphrase Next 3" >
+                    <Widget src="co.nayuta.button" class="aButton rightButton nextButton"  accessibilityLabel="Passphrase Next 3"  id="goTo4Button" text="L('next')"/>   
+                      </View>
+               </View>
+            </View>
+            <View id="page4">
+            <Label class="pageNo">3/3</Label>
+               <View class="pageBack"/>
+               <View class="pageInner" layout="vertical" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+                  <View class="row">
+                     <View class="column">
+                        <Label class="word  wordTop" id="word17" />
+                        <Label class="word" id="word19" />
+                        <Label class="word" id="word21" />
+                        <Label class="word" id="word23" />
+                     </View>
+                     <View class="column rightCol">
+                        <Label class="word  wordTop" id="word18" />
+                        <Label class="word" id="word20" />
+                        <Label class="word" id="word22" />
+                        <Label class="word" id="word24" />
+                     </View>
+                  </View>
+               </View>
+               <View class="buttons"  >
+                <Widget src="co.nayuta.button" class="aButton" id="goTo3Button" text="L('back')" />  
+                <View height="Ti.UI.SIZE" width="Ti.UI.SIZE" >
+                 <Widget src="co.nayuta.button" class="aButton rightButton nextButton" id="goToTestButton"  accessibilityLabel="Passphrase Next 4"  text="L('next')"/> 
+                 </View>  
+               </View>
+            </View>
+            <View id="testPage">
+               <View class="testPageInner">
+                  <Label id="testDescription">L('test_passphrase_description')</Label>
+               <View class="pageBack pageBackTest"/>
+                  <View class="pageInner" layout="vertical" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+                     <View class="testRow">
+                        <View class="testCol">
+                           <Label class="testWord" id="testWord1" />
+                           <Label class="testWord" id="testWord3" />
+                           <Label class="testWord" id="testWord5" />
+                        </View>
+                        <View class="testCol middleCol">
+                           <View class="testWordOuter">
+                            <TextField class="testWordField" id="testWordField1" onChange="checkWord1" />
+                            <View class="line"/>
+                           </View>
+                           <View class="testWordOuter">
+                            <TextField class="testWordField" id="testWordField2" onChange="checkWord2" />
+                            <View class="line"/>
+                           </View>
+                           <View class="testWordOuter">
+                            <TextField class="testWordField" id="testWordField3" onChange="checkWord3" />
+                            <View class="line"/>
+                           </View>
+                        </View>
+                        <View class="testCol">
+                           <Label class="testWord" id="testWord2" />
+                           <Label class="testWord" id="testWord4" />
+                           <Label class="testWord" id="testWord6" />
+                        </View>
+                     </View>
+                  </View>
+               </View>
+               <Widget src="co.nayuta.button" class="aButton aButtonBack" id="lastButton" text="L('back')"/>   
+               <Label id="skip" onClick="skip"  accessibilityLabel="Skip Dev">skip (dev)</Label>
+            </View>
+         </ScrollableView>
+      </View>
+   </Window>
+</Alloy>

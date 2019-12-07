@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View id="mainView" class="mainView">
+			<View platform="android" class="overlay" /> 
+			 
+          
+            <View id="innerView"> 
+               
+                <View class="buttonsOptions">  
+                    <Label id="description" onClick="goToHelp">L('link_node_description')</Label> 
+                    <ImageView class="linkIcon btcPay" onClick="startLink"/>
+                    <Widget src="co.nayuta.button" id="linkBtcPay"  class="aButtonOption nextButton" text="L('link_btc_pay')"/> 
+                    <ImageView class="linkIcon lnd" onClick="startLink"/>
+                    <Widget src="co.nayuta.button" id="linkLND"  class="aButtonOption nextButton" text="L('link_lnd')"/> 
+                </View>
+                
+                <View class="buttons">  
+                  <Widget src="co.nayuta.button" id="firstButtonBack"  class="aButton" text="L('back')"/>
+               </View>
+                
+            </View>
+             <ActivityIndicator id="loadingSpinnerConnect" visible="false" />
+             
+      </View>
+   </Window>
+</Alloy>

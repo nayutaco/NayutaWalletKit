@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View id="addressBarOuter">
+		<View id="addressBar">
+			<!--<Button id="closeButton" onClick="closeBrowser" />-->
+			<Button id="backButton" onClick="goBack" />
+			<View id="rightOptions">
+				<Button id="reloadButton" onClick="reload" />
+				<ActivityIndicator id="activityIndicator" message="" />
+			</View>
+			<Button id="homeButton" onClick="goHome" />
+			<!--<Button id="favouriteButton" onClick="addToFavourites" />-->
+			<TextField class="urlField" id="urlField" onReturn="loadUrl" />
+		</View>
+	</View>
+</Alloy>

@@ -1,0 +1,61 @@
+"#addressBar" : {
+	width: Ti.UI.FILL,
+	height: Alloy.Globals.dappBarHeight,
+	top: Alloy.Globals.dappBarTop
+}
+".urlField" : {
+	right: 35,
+	height: 30,
+	autocorrect:false,
+	autocapitalization:Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE
+}
+".urlField[platform=android]" : {
+	height: 40
+}
+"#homeButton" : {
+	height: 28,
+	width: 28,
+	left: 50,
+	bottom: 6,
+	backgroundImage: "/images/icon_home.png"
+}
+"#favouriteButton" : {
+	height: 28,
+	width: 28,
+	left: 120,
+	bottom: 6,
+	backgroundImage: "/images/icon_bookmark_not.png"
+}
+"#closeButton" : {
+	opacity: 0.5,
+	left: 7,
+	width: 20,
+	height: 20,
+	backgroundImage: "/images/browser_close.png"
+}
+"#backButton" : {
+	opacity: 0.5,
+	left: 10,
+	height: 16,
+	width: 18,
+	backgroundImage: "/images/browser_back.png"
+}
+"#rightOptions" : {
+	width: 25,
+	right: 5
+}
+"#linkageButton" : {
+	height: 30,
+	width: 30,
+	right: 10,
+	bottom: 4,
+	backgroundImage: "/images/icon_linkage.png"
+}
+"#reloadButton" : {
+	height: 18,
+	width: 18,
+	backgroundImage: "/images/browser_reload.png"
+}
+"#activityIndicator" : {
+	indicatorColor: "white"
+}

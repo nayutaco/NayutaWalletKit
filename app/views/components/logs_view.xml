@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="transparent">
+			<View class="tifill background" id="background" />
+			<View class="tifill mainView" id="mainView" layout="vertical">
+				<View class="topbar" id="topbar">
+					<Label class="size15 pull-left pull-bottom" id="gobackButton" onClick="close">L("label_goback")</Label>
+					<Label class="title">L("label_logs")</Label>
+					<Label class="size15 pull-right pull-bottom" id="emailButton" onClick="share">L("label_share")</Label>
+				</View>
+				<ScrollView id="scrollView" class="tifill scrollView" scrollType="vertical" layout="vertical">
+					<Label id="logs_text" />
+				</ScrollView>
+			</View>
+		</View>
+	</Window>
+</Alloy>

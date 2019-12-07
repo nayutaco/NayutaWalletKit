@@ -1,0 +1,87 @@
+".cell" : {
+  height: 70,
+  width: "100%",
+  backgroundColor: 'white'
+}
+".bottomLine" : {
+  height: 1,
+  width: "100%",
+  backgroundColor: 'black',
+  opacity: 0.1,
+  left: 5,
+  bottom: 0
+}
+".cell[platform=android]" : {
+  height: 70,
+  width: "100%"
+}
+".details[platform=android]" : {
+  backgroundColor: "transparent",
+  width: "100%",
+  height: 50
+}
+".details" : {
+  backgroundColor: "transparent",
+  width: "100%",
+  height: 45,
+  layout: 'vertical'
+}
+"#pubKey" : {
+  left: 5,
+  top: 5,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 11,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+"#alias" : {
+  left: 5,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 18,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+".wrapper" : {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  borderColor: Alloy.Globals.mainColor,
+  borderWidth: 1,
+  borderRadius: 15,
+  left: 5
+}
+"#selectButton" : {
+  text:L('label_connect'),
+  bottom: 5,
+  top: 5,
+  left: 10,
+  right: 10,
+  height: 20,
+  width: Ti.UI.SIZE,
+  textAlign: "center",
+  color: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 15,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+"#removeButton" : {
+  width: 25,
+  image: "/images/icon_remove.png"
+}
+".buttons" : {
+  layout: 'horizontal',
+  right: 5,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+"#spinner":{
+  right: 5,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  visible:false
+}

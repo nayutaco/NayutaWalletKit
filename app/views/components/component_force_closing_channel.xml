@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="cell">
+		<View class="details" layout="vertical">
+			<Label id="status" />
+			<Label id="pubKey" class="pubKeyTitle" />
+		</View>
+		<View class="amounts" layout="vertical">
+			<Label id="localAmount" class="localAmountTitle" />
+			<Label id="remoteAmount" class="remoteAmountTitle" />
+		</View>
+		<View id="detailsButton" onClick="viewDetails">
+			<Label id="detailsLabel" />
+		</View>
+	</View>
+</Alloy>

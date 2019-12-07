@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window class="container" id="win">
+      <View id="main">
+         <View class="back">
+            <View class="group">
+               <ImageView class="touchid" />
+               <Label id="instructionLabel" />
+            </View>
+            <Label id="usePassCode" onClick="usePassCode"/>
+         </View>
+      </View>
+   </Window>
+</Alloy>

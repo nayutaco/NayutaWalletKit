@@ -1,0 +1,104 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent", 
+}
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+"#gobackButton":{
+    top: 0,
+	color:Alloy.Globals.nayutaDark,
+	height: Alloy.Globals.topBarHeight,
+	left: 10
+}
+
+".title":{
+	color:Alloy.Globals.nayutaDark,
+}
+
+"#pattern":{
+	top:0,
+	width:"100%", 
+}  
+ 
+
+".mainView":{
+    backgroundColor:"white"
+}
+".icon" : {
+	width: 70
+}
+".icon[if=Alloy.Globals.isSmallScreen]" : {
+	width: 70
+}
+".icon[platform=android]" : {
+	width: 70
+}
+".groupings" : {
+	top: 30,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	layout: 'vertical'
+}
+ 
+".icon[if=Alloy.Globals.isiPhoneX]" : {
+	top: 90
+}
+ 
+".aButton" : {
+	width: "90%",
+	height: 50, 
+	color: "white",
+	font: {
+		fontFamily: "Helvetica Neue",
+		fontSize: 20,
+		fontWeight: "normal"
+	}
+}
+".buttonStyle" : {
+	width: "90%",
+	height: 50,
+	backgroundColor: Alloy.Globals.nayutaDark,
+	borderColor: Alloy.Globals.nayutaDark,
+	borderWidth: 1,
+	borderRadius: 25
+}
+
+"#buttons":{
+    bottom:40, 
+}
+
+"#buttons[if=Alloy.Globals.isiPhoneX]":{
+    bottom:60,
+}
+
+  
+"#spinner":{
+	bottom:60, 
+	indicatorColor: Alloy.Globals.mainColor,
+  	style: Ti.UI.ActivityIndicatorStyle.BIG,
+	visible:false
+	
+}
+
+"#spinner[if=Alloy.Globals.isiPhoneX]":{
+	bottom:80, 
+}
+
+"#setButton":{
+    title:L("label_enable")
+}
+"#skipButton":{
+    top:15,
+   title:L("skip")
+}
+ 
+"#descriptionLabel":{
+    width:"90%",
+    color:Alloy.Globals.nayutaDark,
+    font: {
+      fontSize: 16
+    }, 
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}

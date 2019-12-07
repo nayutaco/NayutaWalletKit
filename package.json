@@ -1,0 +1,39 @@
+{
+  "name": "nayutawallet",
+  "version": "1.0.0",
+  "description": "Developed using Appcelerator Titanium Alloy SDK with custom native iOS and Java libraries.",
+  "main": "index.js",
+  "dependencies": {
+    "appium": "^1.15.1",
+    "appium-xcuitest-driver": "^3.4.0",
+    "gittio": "^0.6.4",
+    "n": "^2.1.12",
+    "prettier": "^1.18.2",
+    "underscore": "^1.9.1",
+    "wd": "^1.11.4",
+    "webdriverio": "^4.6.1"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "wdio-appium-service": "^0.2.3"
+  },
+  "scripts": {
+    "format": "prettier-eslint --write 'app/controllers/**/*.js'",
+    "lint": "eslint app/controllers/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayutaco/nayutawallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayutaco/nayutawallet/issues"
+  },
+  "homepage": "https://github.com/nayutaco/nayutawallet#readme"
+}

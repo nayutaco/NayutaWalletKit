@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="cell" id="cell" onLongpress="showOptions">
+		<View class="details" layout="vertical">
+			<Label id="alias" />
+			<Label id="pubKey" />
+		</View>
+		<ActivityIndicator id="spinner"/>
+		<View class="buttons" id="buttons">
+			<View class="wrapper" id="selectButtonOuter">
+				<Label id="selectButton" onClick="connect" />
+			</View>
+		</View>
+		<View class="bottomLine" />
+	</View>
+</Alloy>

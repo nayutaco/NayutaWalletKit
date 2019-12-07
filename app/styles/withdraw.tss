@@ -1,0 +1,202 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent", 
+}
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+".background" : {
+	backgroundColor: "#000000",
+	opacity: 0
+}
+".sendOuter":{
+	top:35,
+	width: "100%",
+	height: Ti.UI.SIZE,
+}
+"#blockingView" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+
+".seperator1":{ 
+	width:"90%",
+	height:1,
+	opacity:0.7,
+	backgroundColor:"#454647"
+}
+".mainView" : {
+	width: "100%",
+	height: Ti.UI.FILL,
+	backgroundColor:"white",
+	left: Alloy.Globals.display.width
+}
+".mainView[platform=android]" : {
+	left: 0
+}
+"#sendSpinner" : {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	indicatorColor: Alloy.Globals.mainColor
+}
+"#sendSpinner[platform=ios]" : {
+	style: Titanium.UI.ActivityIndicatorStyle.BIG,
+	indicatorColor: Alloy.Globals.mainColor
+}
+".amounts" : {
+	width: Ti.UI.FILL,
+	height:Ti.UI.SIZE,
+	top:10,
+
+}
+"#pattern":{
+	top:0,
+	width:"100%", 
+}  
+".outer":{
+	layout:"vertical",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+".destinationView":{
+	width:"100%",
+	height:Ti.UI.SIZE,
+}
+".qrcode":{
+	layout:"horizontal",
+	width: 40,
+	height: 40,
+	right:"5%",
+	image: "/images/qrCodeIcon.png"
+}
+".inputDestination" : {
+	width: "80%",
+	height: 40,
+	top:10,
+	left:"5%",
+	padding: {
+		right: 7,
+		left: 7
+	},
+	textAlign: "left",  
+	autocapitalization:Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	autocorrect:false
+} 
+"#amount":{
+	backgroundColor:"transparent",
+	width:Ti.UI.SIZE,
+
+	height:Ti.UI.SIZE, 
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+	padding: {
+		right: 7,
+		left: 7
+	},
+}
+".amountView" : {
+	top: 0
+}
+".amountBTC" : {
+	font: {
+		fontSize: 30,
+		fontFamily: 'GillSans-Light',
+		fontWeight: 'light'
+	},
+	bottom: 5
+}
+".amount":{
+	font: {
+		fontSize: 60,
+		fontFamily: 'GillSans-Light',
+		fontWeight: 'light'
+	}
+}
+".fiatView":{
+	top:0
+}
+
+".fiat" : {
+	font: {
+		fontSize: 30,
+		fontFamily: 'GillSans-Light',
+		fontWeight: 'light'
+	},
+	textAlign:"center",
+	width:Ti.UI.SIZE, 
+	height:Ti.UI.SIZE, 
+	backgroundColor:"transparent",
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+	padding: {
+		right: 7,
+		left: 7
+	},
+}
+
+".fiatSymbol" : {
+	font: {
+		fontSize: 30,
+		fontFamily: 'GillSans-Light',
+		fontWeight: 'light'
+	},
+	width:Ti.UI.SIZE, 
+	backgroundColor:"transparent",
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD
+}
+".switchIcon" : {
+	height: 30,
+	top: 100,
+	right: 10
+}
+".balance" : {
+	top: 10
+}
+".priority" : {
+	top: 5
+}
+".switchIcon" : {
+	height: 30,
+	top: 100,
+	right: 10
+}
+".keypad" : {
+	backgroundColor: "#ececec"
+}
+".padrow" : {
+	width: Ti.UI.FILL,
+	height: "20%"
+}
+"#numberPadQrcode" : {
+	width: 60,
+	height: 60,
+	backgroundImage: "/images/icon_qrcode.png"
+}
+".numberPad" : {
+	backgroundColor: "transparent",
+	width: "33.2%",
+	height: Ti.UI.FILL,
+	color: Alloy.Globals.mainColor,
+	font: {
+		fontSize: 28,
+		fontFamily: 'GillSans-Light',
+		fontWeight: 'light'
+	}
+}
+".text" : {
+	color: Alloy.Globals.mainColor,
+	font: {
+		fontFamily: 'Gill Sans',
+		fontWeight: 'light'
+	}
+}
+"#sendLabel" : {
+	top:10,
+}
+"#numberPadDel" : {
+	title: L('label_del')
+}
+
+"#sendAllButton" : {
+	top: 80
+}
+ 

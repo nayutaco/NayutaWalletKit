@@ -1,0 +1,120 @@
+#!/bin/bash
+
+DIR_SIMULATOR="/build/Debug-iphonesimulator"
+DIR_DEVICE="/build/Debug-iphoneos"
+NAYUTA_DIR="../nayuta/app/platform/ios"
+
+
+echo "getting ioscrypto..."
+rm -rf ../ioscrypto
+git clone https://github.com/mandelmonkey/ioscrypto.git ../ioscrypto
+
+
+echo "getting web3..."
+rm -rf ../web3
+git clone https://github.com/mandelmonkey/web3iOSWebView.git ../web3
+
+echo "getting lnGRPCWrapper..."
+rm -rf ../lnGRPCWrapper
+git clone https://github.com/mandelmonkey/lnGRPCWrapper.git ../lnGRPCWrapper
+
+echo "getting lnd..."
+go get -d github.com/lightningnetwork/lnd
+cwd=$(pwd)  
+
+cd ..
+cwd2=$(pwd)
+
+cd lnGRPCWrapper
+pod install
+
+cd $GOPATH/src/github.com/lightningnetwork/lnd
+
+echo "Checkout to latest rc tag"
+
+#git checkout tags/v0.8.0-beta-rc3
+
+echo "Creating ios lndmobile..."
+
+make ios tags="wtclientrpc" 
+
+echo "Creating android lndmobile..."
+make android tags="wtclientrpc" 
+
+cp -r mobile/build/android/Lndmobile.aar $cwd/app/platform/android
+cp -r mobile/build/ios/Lndmobile.framework $cwd/app/platform/ios
+cp -r mobile/build/ios/Lndmobile.framework $cwd2/lnGRPCWrapper
+cd $cwd;
+ 
+ls
+
+echo "Cleaning ioscrypto project..."
+xcodebuild clean -project ../ioscrypto/ioscrypto.xcodeproj -scheme ioscrypto
+ 
+echo "Building ioscrypto for simulator..."
+
+xcodebuild -project ../ioscrypto/ioscrypto.xcodeproj -scheme ioscrypto -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../ioscrypto/build > /dev/null
+
+echo "Building ioscrypto for device..."
+
+xcodebuild -project ../ioscrypto/ioscrypto.xcodeproj -scheme ioscrypto -configuration Debug -sdk iphoneos -destination generic/platform=iOS SYMROOT=$(PWD)/../ioscrypto/build > /dev/null
+ 
+echo "Cleaning web3 project..."
+
+xcodebuild clean -project ../web3/web3.xcodeproj -scheme web3
+
+
+echo "Building web3 for simulator..."
+
+xcodebuild -project ../web3/web3.xcodeproj -scheme web3 -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../web3/build > /dev/null
+
+
+echo "Building web3 for device..."
+
+xcodebuild -project ../web3/web3.xcodeproj -scheme web3 -configuration Debug -sdk iphoneos -destination generic/platform=iOS SYMROOT=$(PWD)/../web3/build > /dev/null
+
+
+echo "Cleaning lnGRPCWrapper project..."
+
+xcodebuild clean -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper
+
+
+echo "Building lnGRPCWrapper for simulator..."
+
+xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../lnGRPCWrapper/build > /dev/null
+ 
+echo "Building lnGRPCWrapper for device..."
+
+xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphoneos -destination generic/platform=iOS SYMROOT=$(PWD)/../lnGRPCWrapper/build > /dev/null
+
+echo "Creating FAT libraries..."
+
+function copyFunc {
+        echo 'create FAT library for' "$2"'/'"$3"
+       rm -rf app/platform/ios/"$3"
+   cp -r "$1"$DIR_SIMULATOR/"$2"/"$3" app/platform/ios/"$3" 
+    lipo -create "$1"$DIR_SIMULATOR/"$2"/"$3"/"$4" "$1"$DIR_DEVICE/"$2"/"$3"/"$4" -output app/platform/ios/"$3"/"$4"
+        
+        /usr/libexec/PlistBuddy -c "delete :CFBundleSupportedPlatforms" app/platform/ios/"$3"/Info.plist
+        /usr/libexec/PlistBuddy -c "add :CFBundleSupportedPlatforms array" app/platform/ios/"$3"/Info.plist
+        /usr/libexec/PlistBuddy -c "add :CFBundleSupportedPlatforms: string iPhoneOS" app/platform/ios/"$3"/Info.plist
+        #/usr/libexec/PlistBuddy -c "add :CFBundleSupportedPlatforms: string 'iPhoneSimulator'" app/platform/ios/"$3"/Info.plist
+  } 
+ 
+  
+copyFunc  '../lnGRPCWrapper' 'BoringSSL' 'openssl.framework' 'openssl'
+copyFunc  '../lnGRPCWrapper' 'GoogleAPIClientForREST' 'GoogleAPIClientForREST.framework' 'GoogleAPIClientForREST'
+copyFunc  '../lnGRPCWrapper' 'GoogleToolboxForMac' 'GoogleToolboxForMac.framework' 'GoogleToolboxForMac'
+copyFunc  '../lnGRPCWrapper' 'GTMSessionFetcher' 'GTMSessionFetcher.framework' 'GTMSessionFetcher' 
+copyFunc  '../lnGRPCWrapper' 'nanopb' 'nanopb.framework' 'nanopb'
+copyFunc  '../lnGRPCWrapper' 'gRPC-Core' 'grpc.framework' 'grpc'
+copyFunc  '../lnGRPCWrapper' '' 'lnGRPCWrapper.framework' 'lnGRPCWrapper'
+copyFunc  '../lnGRPCWrapper' 'Starscream' 'Starscream.framework' 'Starscream'
+copyFunc  '../lnGRPCWrapper' 'SwiftGRPC' 'SwiftGRPC.framework' 'SwiftGRPC'
+copyFunc  '../lnGRPCWrapper' 'SwiftProtobuf' 'SwiftProtobuf.framework' 'SwiftProtobuf'
+copyFunc  '../ioscrypto' '' 'ioscrypto.framework' 'ioscrypto'
+copyFunc  '../web3' '' 'web3.framework' 'web3'
+                
+echo "complete"
+
+exit 0

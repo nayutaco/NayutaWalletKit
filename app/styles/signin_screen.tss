@@ -1,0 +1,165 @@
+"#win" : {
+	backgroundColor: Alloy.Globals.windowColor, 
+	flagSecure : true
+}
+
+"#description":{
+  bottom:20,
+  width:"70%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.bodyFont
+}
+
+"#scrollView":{
+    scrollingEnabled:false
+}
+
+
+".line":{
+    height:1,
+    width:"20%",
+    backgroundColor:Alloy.Globals.fontColor1, 
+}
+".column":{ 
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+".rightCol":{
+    left:40
+}
+".row":{   
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+
+".pageBack":{
+  width:"100%",
+  height:"50%",
+  opacity:0.3,
+  backgroundColor:Alloy.Globals.mainColor,
+}
+
+".pageBackTest":{ 
+  height:"40%",
+}
+
+".word":{ 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1, 
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  },
+  autocorrect:false,
+	autocapitalization:Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE,
+  hintTextColor:"gray",
+  left:0,
+  top:40,
+  width:120,
+  height:45  
+}
+".wordTop":{
+  top:0,
+}
+
+".buttons":{
+  top: 15,
+  bottom: 15,
+  layout:"horizontal",
+  width:Ti.UI.SIZE,
+  height:Ti.UI.SIZE
+}
+
+".buttonsOptions":{
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE, 
+}
+
+".aButton":{ 
+  width:120,
+  height:40,
+  borderRadius:20,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+".aButtonOption":{ 
+  top:30,
+  width:240,
+  height:50,
+  borderRadius:25,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+ 
+".pageNo":{  
+  top:70,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.bodyFont
+} 
+ 
+".pageInner":{
+    top: "20",
+    height: "400",
+    width: "100%",
+    backgroundColor:Alloy.Globals.themeColor
+}
+ 
+".nextButton":{
+  backgroundColor:Alloy.Globals.nayutaDark,
+  textColor:"white",
+  borderColor:Alloy.Globals.nayutaDark,
+} 
+
+".right":{
+    left:30
+}
+
+".rightButton":{
+    left:40
+}
+
+ 
+".middleCol":{
+    left:20,
+    right:20
+}
+ 
+".aButtonBack":{
+    bottom:50
+}
+
+".line":{
+    height:1,
+    width:150,
+    backgroundColor: Alloy.Globals.fontColor1,
+}
+
+"#skip":{
+  top: 10,
+  bottom:10
+}
+
+".pageInnerScroll": {
+  width: Ti.UI.SIZE, 
+  height: "100%", 
+  scrollType: "vertical",
+  layout: "vertical"
+}

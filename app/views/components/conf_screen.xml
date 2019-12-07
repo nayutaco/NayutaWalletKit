@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="mainView" id="mainView" onClick="close">
+		<View id="colorView" />
+		<View id="infoView">
+			<ImageView id="checkIcon" class="checkIcon" />
+			<Label class="statusLabel" id="statusLabel" />
+		</View>
+		<Label id="okLabel" onClick="close">L('label_ok')</Label>
+	</View>
+</Alloy>

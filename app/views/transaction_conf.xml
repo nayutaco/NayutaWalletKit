@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="transparent">
+		<View class="background2" id="background" />
+		<ScrollView id="mainView">
+			<ImageView id="img" />
+			<View class="confBox" id="confBox">
+				<View class="topLine" />
+				<View id="loading">
+					<ActivityIndicator id="loadingSpinner" />
+				</View>
+				<Button id="cancelButtonSmall" onClick="cancelPayment" />
+				<View id="paid">
+					<ImageView class="paidImg" />
+				</View>
+				<View id="notpaid">
+					<ImageView class="notPaidImg" />
+				</View>
+				<View id="mainInfo">
+					<View layout="vertical" class="info" id="info">
+						<Label class="font" id="message" />
+						<Label class="lab font" id="feeText" />
+						<TextField id="channelAmount" />
+						<TextField id="paymentRequest" />
+						<TextField id="configField" />
+						<View id="customPayment">
+							<TextField id="paymentAmount" onKeypressed="updateAmount" onChange="androidChangeValue">
+								<KeyboardToolbar platform="ios">
+									<Toolbar>
+										<Items>
+											<Button title="Done" onClick="hideKeyboard" />
+										</Items>
+									</Toolbar>
+								</KeyboardToolbar>
+							</TextField>
+							<TextField id="paymentAmountFiat" onKeypressed="updateAmountFiat" onChange="androidChangeValueFiat">
+								<KeyboardToolbar platform="ios">
+									<Toolbar>
+										<Items>
+											<Button title="Done" onClick="hideKeyboard" />
+										</Items>
+									</Toolbar>
+								</KeyboardToolbar>
+							</TextField>
+						</View>
+						<View id="onChainPayment">
+							 <View id="feeOuter"><Label id="feeLabel"></Label><Button id="changeFeeButton" onClick="updateFee"></Button></View>
+						</View>
+						<View layout="horizontal" class="buttonsView" id="buttonsView">
+							<Button id="cancelButton" class="buttons font" onClick="cancel" />
+							<Button id="confirmButton" class="buttons font" onClick="confirm" />
+						</View>
+					</View>
+				</View>
+			</View>
+		</ScrollView>
+	</View>
+</Alloy>

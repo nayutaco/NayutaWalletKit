@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="transparent">
+			<View class="tifill background" id="background" />
+			<View class="tifill mainView" id="mainView">
+				<View platform="android" class="overlay" /> 
+				 
+				<View class="outer">
+					<View class="amounts">
+						<View class="tisize pull-bottom" layout="vertical">
+							<View class="tisize" layout="vertical">
+								<View class="tisize amountView" id="amountView" layout="horizontal">
+									<TextField class="amount" id="amount" onFocus="selectedCrypto" onChange="updateValues">
+										<KeyboardToolbar platform="ios">
+											<Toolbar>
+												<Items>
+													<Button title="Done" onClick="hideKeyboard" />
+												</Items>
+											</Toolbar>
+										</KeyboardToolbar>
+									</TextField>
+									<Label class="amountBTC" id="amountBTC" />
+								</View>
+								<View class="tisize fiatView" id="fiatView" layout="horizontal">
+									<Label class="fiatSymbol" id="fiatSymbol" />
+									<TextField class="fiat" id="fiat" onFocus="selectedFiat" onChange="updateValues">
+										<KeyboardToolbar platform="ios">
+											<Toolbar>
+												<Items>
+													<Button title="Done" onClick="hideKeyboard" />
+												</Items>
+											</Toolbar>
+										</KeyboardToolbar>
+									</TextField>
+								</View>
+							</View>
+							<Label class="size15  balance" id="balance" /> 
+						</View>
+					</View>
+					<View class="destinationView">
+						<TextField class="inputDestination" id="inputDestination" /> 
+						<ImageView class="qrcode" onClick="scanQRCode" />
+					</View>
+					<View class="seperator1" />
+					<View class="sendOuter">
+						<ActivityIndicator id="sendSpinner" />
+						<Label class="containedButton" id="sendLabel" onClick="pressedSend" >L("label_send")</Label>
+						<Label class="outlinedButton" id="sendAllButton" onClick="sendAll">L("label_send_all")</Label>
+					</View>
+				</View>
+				<Label class="backButton pull-left pull-bottom" id="gobackButton" onClick="close">L("label_goback")</Label>
+			</View>
+			<View id="blockingView" />
+		</View>
+	</Window>
+</Alloy>

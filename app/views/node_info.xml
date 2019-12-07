@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="mainView">
+		<View class="detailsView" layout="vertical">
+			<Label id="alias" />
+			<View class="qrcodeImage" id="qrcode" onClick="copyClipboard" />
+			<Label id="pubkey" />
+			<Label class="title" id="chainTitle">L('label_chain')</Label>
+			<Label class="description" id="chain" />
+			<Label class="title" id="hostTitle">L('label_host')</Label>
+			<Label class="description" id="host" />
+			<Label id="close" onClick="close">L('label_close')</Label>
+		</View>
+	</View>
+</Alloy>

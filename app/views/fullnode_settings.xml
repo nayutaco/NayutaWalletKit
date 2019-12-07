@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View class="tifill background" id="background">
+         <View class="backgroundInner" id="backgroundInner" />
+         <View class="innerView">
+            <Label id="backButton" onClick="close">back</Label>
+            <View class="option" onClick="goToConfig">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("config")</Label>
+                  <Label class="optionDescription">L("config_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View>
+            <View class="option" onClick="viewLogs">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("logs")</Label>
+                  <Label class="optionDescription">L("logs_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View>
+            <View class="option" onClick="goToConsole">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("console")</Label>
+                  <Label class="optionDescription">L("console_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View>
+
+            <View class="option" onClick="goToDownloadUTXOPage">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("label_download_utxo")</Label>
+                  <Label class="optionDescription">L("label_download_utxo_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View>
+
+             <View class="option" onClick="reindex">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("label_reindex")</Label>
+                  <Label class="optionDescription">L("label_reindex_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View>
+            <View class="option" onClick="deleteData">
+               <View class="optionBackground" />
+               <View class="optionLabels">
+                  <Label class="optionLabel">L("core_delete")</Label>
+                  <Label class="optionDescription">L("core_delete_description")</Label>
+               </View>
+               <ImageView class="optionButton" />
+            </View> 
+         </View>
+      </View>
+   </Window>
+</Alloy>

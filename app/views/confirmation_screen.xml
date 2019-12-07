@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="transparent">
+		<View class="background2" id="background" />
+		<ScrollView id="mainView">
+			<ImageView id="img" />
+			<View class="confBox" id="confBox">
+				<View class="topLine" />
+				<View id="loading">
+					<ActivityIndicator id="loadingSpinner" />
+				</View>
+				<View id="success">
+					<ImageView class="paidImg" />
+				</View>
+				<View id="error">
+					<ImageView class="notPaidImg" />
+				</View>
+				<View id="mainInfo">
+					<View layout="vertical" class="info" id="info">
+						<Label class="font" id="message" />
+						<View layout="horizontal" class="buttonsView" id="buttonsView">
+							<Button id="cancelButton" class="buttons font" onClick="cancel" />
+							<Button id="confirmButton" class="buttons font" onClick="confirm" />
+						</View>
+					</View>
+				</View>
+			</View>
+		</ScrollView>
+	</View>
+</Alloy>

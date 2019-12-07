@@ -1,0 +1,159 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent",
+}
+
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+"#topbar" : {
+	height: Alloy.Globals.topBarHeight,
+	top: 0
+}
+".mainView" : {
+	width: "100%",
+	left: Alloy.Globals.display.width,
+	backgroundColor: "#ececec"
+}
+".mainView[platform=android]" : {
+	width: "100%",
+	left: 0
+}
+".background" : {
+	backgroundColor: "#000000",
+	opacity: 0
+}
+".scrollView" : {
+	backgroundColor: "transparent"
+}
+
+"#firstOption[platform=ios]":{
+	top:25
+}
+
+".subtitle" : {
+	width: Ti.UI.FILL,
+	height: 40,
+	top: 0
+}
+
+"#closeButton" : {
+	top: 0,
+	height: 40,
+	left: 10
+}
+
+".box" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+	top: 10,
+	backgroundColor: "transparent"
+}
+".mainBox" : {
+	width: Ti.UI.FILL,
+	height: 40,
+	backgroundColor: "#ffffff"
+}
+".icon" : {
+	height: 40
+}
+"#version" : {
+	top: 20,
+	width: Ti.UI.FILL,
+	textAlign: 'center'
+}
+".settingLabel" : {
+	width: "70%",
+	left: 50,
+	textAlign: "left"
+}
+".arrow" : {
+	height: 15
+}
+"#autoPilotImage" : {
+	height: 15,
+	right: 5
+}
+".description" : {
+	top: 5,
+	left: 10
+}
+
+".option":{
+    width:"100%",
+    height:100,
+    top:10, 
+}
+
+".optionBackground":{
+    width:Ti.UI.FILL,
+    height:Ti.UI.FILL,
+    backgroundColor:Alloy.Globals.nayutaDark,
+    opacity:1.0
+}
+
+
+".options":{
+    top:30,
+    layout:"vertical", 
+    height:Ti.UI.SIZE,
+    width:"100%",
+ 
+}
+
+".optionLabel":{
+    color:"white",
+	width:"85%",
+    font: {
+		fontSize: 22,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    left:10
+}
+
+".optionDescription":{
+    color:"white",
+    font: {
+		fontSize: 14,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+		height: Ti.UI.SIZE,
+    left:10,
+    width:"70%",
+    opacity:0.6
+}
+
+".optionLabels":{
+    layout:"vertical",  
+    height:Ti.UI.SIZE,
+    width:"100%",
+}
+
+".optionSwitch":{
+    right:10
+}
+
+".optionButton":{
+    right:15,
+    image:"images/rightArrow.png", 
+    height:35
+}
+
+".settingsLabel": {
+	top: Alloy.Globals.headerTop,
+  	color: Alloy.Globals.themeColor,
+  	font: Alloy.Globals.bodyFont,
+  	width: Ti.UI.SIZE,
+  	height: Ti.UI.SIZE
+}
+
+".settingsLabel[if=Alloy.Globals.isiPhoneX]": {
+  top: Alloy.Globals.headerTopIphoneX,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.bodyFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}

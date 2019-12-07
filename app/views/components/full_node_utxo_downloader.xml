@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy> 
+	<Window id="win">
+	<View class="background">
+
+        <Label id="close" onClick="close">L('label_close')</Label>
+         <Label id="reset" onClick="reset">L('label_reset')</Label>
+
+    <View id="controls">
+	<Label id="controlsDesc" ></Label>
+	<View id="controlsInner">
+		<Label id="status" />
+        
+        <Button id="downloadGoogleDrive" onClick="downloadUTXOSet"></Button>
+</View>	 
+			</View>	 
+	</View>
+
+    <View id="checkSumView">
+		<Label id="checkSumDescLabel">L('check_sum_desc')</Label>
+        	<Label id="checkSumLabel" />
+        <Button id="unZipButton" onClick="unZip"></Button>
+
+			</View>	
+
+
+			  <View class="backgroundInner" id="page1">
+               <Label class="title" id="title1">L("utxo_set_title")</Label>
+               <Label class="description">L("utxo_set_desc")</Label>
+               <ImageView id="laptopToMobile" />
+               <Label class="nextButton" onClick="goToPage2" />
+            </View>
+            <View class="backgroundInner" id="page2" visible="false">
+               <Label class="title" id="title2">L("utxo_set_2_title")</Label>
+               <Label class="descriptionSmall">L("utxo_set_2_desc")</Label>
+               <ImageView id="bitcoin" />
+			   <Label class="moreInfo" onClick="goToGuide" >L("full_guide")</Label>
+               <Label class="nextButton" onClick="closeIntro" />
+            </View>
+			 
+	</View>
+    </Window>
+</Alloy>

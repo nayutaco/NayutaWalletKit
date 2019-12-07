@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="cell">
+		<View class="details" onClick="clickAction">
+			<ImageView id="type" />
+			<View id="values">
+				<Label id="value" />
+				<Label id="valueFiat" />
+			</View>
+			<View id="leftSide">
+				<Label id="memo" />
+				<Label id="date" />
+			</View>
+		</View>
+	</View>
+</Alloy>

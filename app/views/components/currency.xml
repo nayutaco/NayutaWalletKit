@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="transparent">
+		<View class="tifill background" id="background" />
+		<View class="tisize mainView" id="mainView" layout="vertical">
+			<View class="topbar">
+				<ImageView class="closeIcon pull-right" id="closeIcon" image="/images/icon_close_white.png" />
+			</View>
+			<View class="separator" />
+			<ScrollView class="tifill" id="currencyList" scrollType="vertical" layout="vertical" showVerticalScrollIndicator="true" />
+		</View>
+	</View>
+</Alloy>

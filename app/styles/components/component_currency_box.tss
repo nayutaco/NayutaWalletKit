@@ -1,0 +1,18 @@
+".currencyBox": {
+	width: Ti.UI.FILL,
+	height: 50,
+	top: 0,
+	backgroundColor: "#ffffff"
+}
+
+".checkedIcon": {
+	width: 25,
+	height: 25
+}
+
+".currencyBorder": {
+	width: Ti.UI.FILL,
+	height: 1,
+	bottom: 0,
+	backgroundColor: "#ececec"
+}

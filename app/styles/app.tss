@@ -1,0 +1,277 @@
+"Window[platform=android]" : {
+	theme: "Theme.NayutaTheme",
+	backgroundColor: "transparent",
+	windowSoftInputMode: Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN,
+	navBarHidden: true,
+	orientationModes: [Ti.UI.PORTRAIT],
+}
+"Label" : {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000000",
+	font: {
+		fontFamily: "HelveticaNeue-Light",
+		fontSize: 18,
+		fontWeight: "normal"
+	}
+}
+"TextField" : {
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS,
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT,
+	returnKeyType: Ti.UI.RETURNKEY_DONE,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	backgroundColor: "#ffffff",
+	color: "#333300",
+	height: 50,
+	width: 250,
+	padding: {
+		left: 5
+	}
+}
+".container" : {
+	backgroundColor: "white"
+}
+".transparent" : {
+	backgroundColor: "transparent"
+}
+".indiecaterDark" : {
+	style: Ti.UI.ActivityIndicatorStyle.DARK
+}
+".activityIndicatorFull" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor: "#ffffff",
+	opacity: 0.5
+}
+".tisize" : {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+}
+".tifill" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+".p" : {
+	left: 5
+}
+".error" : {
+	width: Ti.UI.FILL,
+	height: 60,
+	color: "#ffffff",
+	backgroundColor: Alloy.Globals.mainColor
+}
+".topBarTop" : {
+	width: Ti.UI.FILL,
+	height: Alloy.Globals.topBarHeight,
+	top: 0,
+	backgroundColor: "white"
+}
+".topbar" : {
+	width: Ti.UI.FILL,
+	height: Alloy.Globals.topBarHeight,
+	top: 0,
+	backgroundColor:"white"
+}
+".separator" : {
+	width: Ti.UI.FILL,
+	height: 1,
+	backgroundColor: '#000000',
+	top: 0,
+	opacity: 0.2
+}
+".tableViewFooter" : {
+	height: 50,
+	width: Ti.UI.FILL
+}
+".tableViewFooter" : {
+	height: 50,
+	width: Ti.UI.FILL
+}
+".loadingLabelFooter" : {
+	left: 5,
+	color: 'gray'
+}
+".title" : {
+	top: 28,
+	color: "#ffffff",
+	font: {
+		fontSize: 20
+	}
+}
+".title[if=Alloy.Globals.isiPhoneX]" : {
+	top: 38
+}
+".title[platform=android]" : {
+	top: 12
+}
+".center" : {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+".pull-left" : {
+	left: 10
+}
+".pull-right" : {
+	right: 10
+}
+".pull-bottom" : {
+	bottom: 10
+}
+".bold" : {
+	font: {
+		fontWeight: "bold"
+	}
+}
+".red" : {
+	color: "#e54353"
+}
+".green" : {
+	color: "#2f6723"
+}
+".blue" : {
+	color: "#7083be"
+}
+".gray" : {
+	color: "#929292"
+}
+".white" : {
+	color: "#ffffff"
+}
+".size8" : {
+	font: {
+		fontSize: 8
+	}
+}
+".size10" : {
+	font: {
+		fontSize: 10
+	}
+}
+".size12" : {
+	font: {
+		fontSize: 12
+	}
+}
+".size15" : {
+	font: {
+		fontSize: 15
+	}
+}
+".size18" : {
+	font: {
+		fontSize: 18
+	}
+}
+".size20" : {
+	font: {
+		fontSize: 20
+	}
+}
+".size25" : {
+	font: {
+		fontSize: 25
+	}
+}
+".size30" : {
+	font: {
+		fontSize: 30
+	}
+}
+".size40" : {
+	font: {
+		fontSize: 40
+	}
+}
+".overlay[platform=android]":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	bottom:-600,
+	touchEnabled:false,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '0%', y: '0%' },
+        colors: [ { color: Alloy.Globals.mainColor, offset: 0.0}, { color: 'transparent', offset: 0.7 } ],
+    } 
+ 
+}
+
+".overlay[platform=ios]":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL, 
+	touchEnabled:false,
+	image:"/images/gradientOverlay.png"
+ 
+}
+
+".containedButton": {
+	color: "#FFFFFF",
+	backgroundColor: Alloy.Globals.themeColor,
+	borderRadius:25,
+  	borderWidth:1,
+  	width: "80%",
+  	height: 50,
+  	borderColor: Alloy.Globals.themeColor,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+ 	font: Alloy.Globals.bodyFont
+}
+
+".outlinedButton": {
+  color: Alloy.Globals.themeColor,
+  backgroundColor: "transparent",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  width: "80%",
+  height: 50,
+  borderRadius: 25,
+  borderWidth: 2,
+  borderColor: Alloy.Globals.themeColor,
+  font: Alloy.Globals.bodyFont
+}
+
+".syncViewBlock":{
+  width:Ti.UI.FILL,
+  height:Ti.UI.FILL,
+  backgroundColor:"white",
+  visible:false
+}
+
+".syncViewBlockDescription":{ 
+	textAlign:"center",
+	width:"70%",
+	height:Ti.UI.SIZE,
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18
+	}
+}
+
+".nayutaIcon[if=Alloy.Globals.isiPhoneX]": {
+  	top: Alloy.Globals.headerTopIphoneX,
+	left: Alloy.Globals.headerLeft,
+	image:"/images/nayuta.png",
+	height:20
+}
+
+".nayutaIcon": {
+	top: Alloy.Globals.headerTop,
+	left: Alloy.Globals.headerLeft,
+	image:"/images/nayuta.png",
+	height:20
+}
+
+".backButton[if=Alloy.Globals.isiPhoneX]": {
+  top: Alloy.Globals.headerTopIphoneX,
+  left: Alloy.Globals.headerLeft,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.mediumFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+".backButton": {
+  top: Alloy.Globals.headerTop,
+  left: Alloy.Globals.headerLeft,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.mediumFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}

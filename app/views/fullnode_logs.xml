@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View class="tifill background" id="background">
+          
+<TextArea class="logs" id="logs">
+                    
+    </TextArea>
+
+    <View class="buttons">
+    <Label class="aButton" onClick="close">back</Label>
+
+    <Label class="aButton" onClick="refresh">refresh</Label>
+    <Label class="aButton" onClick="copy">copy</Label>
+    </View>
+    
+    </View>
+   </Window>
+</Alloy>

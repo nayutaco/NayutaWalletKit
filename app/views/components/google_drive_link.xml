@@ -1,0 +1,59 @@
+<Alloy>
+	<Window class="transparent" id="win">
+		 	<View class="tifill mainView">
+             
+			<View platform="android" class="overlay" /> 
+            
+             <Label class="backButton size15 white" id="gobackButton" onClick="close">L("label_goback")</Label>
+             <Label class="unlink size15 white" id="unLinkButton" onClick="unLink">L("label_unlink")</Label>
+
+				<View class="groupings">
+					<ImageView class="icon" id="backupIcon" image="/images/icon_back_up.png"/>
+					<Label class="size18 bold title" id="title">L("channels_backup_title")</Label>
+				</View>
+				<View class="tisize" layout="vertical">
+					<Label id="descriptionLabel">L("channel_backup_description")</Label>
+					  
+				</View>
+                <View id="backUpButtons" class="tisize" layout="vertical">
+               
+                <View id="backUpGoogleDriveOuter" >
+                        <View id="backUpGoogleDriveInner" >
+                             <ActivityIndicator id="backUpGoogleDriveSpinner" visible="false"/>
+				             <Label class="buttonStyle aButton" id="backUpGoogleDrive" onClick="startBackUp"></Label>
+                        </View>
+					<Label id="lastBackUp"></Label>
+                </View>
+                    
+                    <Label class="buttonStyle aButton" id="backUpEmail" onClick="emailBackUp"></Label>
+                </View>
+
+				<View id="restoreButtons" class="tisize" layout="vertical">
+               
+                <View id="backUpGoogleDriveOuter" >
+                        <View id="backUpGoogleDriveInner" >
+                             <ActivityIndicator id="restoreSpinner" visible="false"/>
+				             <Label class="buttonStyle aButton" id="restoreButton" onClick="restoreBackup"></Label>
+                        </View>
+					 
+                </View>
+                    
+                    <Label class="buttonStyle aButton" id="skipButton" onClick="skip"></Label>
+                </View>
+
+                <View id="linkButtons" class="tisize" layout="vertical">
+               
+                <View id="backUpGoogleDriveOuter" >
+                        <View id="backUpGoogleDriveInner" >
+                             <ActivityIndicator id="linkGoogleDriveSpinner" visible="false"/>
+				             <Label class="containedButton" id="linkGoogleButton" onClick="startLink"></Label>
+                        </View>
+					 
+                </View>
+                    
+                    <Label class="outlinedButton" id="laterButton" onClick="skip" accessibilityLabel="link later"></Label>
+                </View>
+			</View>
+ 
+	</Window>
+</Alloy>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View id="mainView" onClick="close">
+			<ImageView class="background" />
+			<View id="detailsView">
+				<Label id="guide_title" />
+				<Label id="guide_text" />
+				<Label id="backButton" />
+			</View>
+		</View>
+	</Window>
+</Alloy>

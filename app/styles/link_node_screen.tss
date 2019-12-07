@@ -1,0 +1,84 @@
+"#win" : {
+	backgroundColor: Alloy.Globals.windowColor, 
+}
+
+"#description":{
+  bottom:20,
+  width:"70%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+ 
+".buttons":{
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+  bottom:40
+}
+
+".buttonsOptions":{
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE, 
+}
+
+".aButton":{ 
+  width:120,
+  height:40,
+  borderRadius:20,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+".nextButton":{
+  backgroundColor:Alloy.Globals.nayutaDark,
+  textColor:"white",
+  borderColor:Alloy.Globals.nayutaDark,
+} 
+
+
+".aButtonOption":{ 
+  top:20,
+  bottom:30,
+  width:200,
+  height:40,
+  borderRadius:20,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+ 
+
+".linkIcon":{
+    width:100,
+    top:10,
+}
+
+".btcPay":{
+    image:"/images/btcPayServerIcon.png"
+}
+
+".lnd":{
+    image:"/images/lndIcon.png"
+}
+
+"#loadingSpinnerConnect":{
+    width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	style: Ti.UI.ActivityIndicatorStyle.BIG,
+	indicatorColor: Alloy.Globals.mainColor
+}

@@ -1,0 +1,28 @@
+<Alloy>
+	<Window class="transparent" id="win">
+		 	<View class="tifill mainView">
+             
+			<ImageView id="pattern" image="/images/pattern.png" />
+			<View platform="android" class="overlay" /> 
+		 
+             
+             	<View class="groupings">
+					<ImageView class="icon" image="/images/icon_auto_pilot.png"/>
+					<Label class="size18 bold title" id="title">L("auto_pilot_title")</Label>
+				</View>
+				<View class="tisize" layout="vertical">
+					<Label id="descriptionLabel">L("auto_pilot_description")</Label>
+				</View>
+				<ActivityIndicator id="spinner"/>
+                <View id="buttons" class="tisize" layout="vertical">
+
+                    <Button class="containedButton" id="setButton" onClick="setAutoPilot"></Button>
+               
+                    <Button class="outlinedButton" id="skipButton"  onClick="skip" accessibilityLabel="Skip Auto Pilot"></Button>
+                </View>
+ 
+ 
+			</View>
+ 
+	</Window>
+</Alloy>

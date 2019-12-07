@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="tifill background" id="background" />
+		<Label id="amountLab">+1</Label>
+		<View class="tifill mainView" id="mainView">
+			<Label id="balanceText" />
+			<Label id="closeButton" onClick="close">close</Label>
+		</View>
+		<View class="tifill" id="confView">
+			<View id="gameInfoView" layout="vertical">
+				<ImageView id="gameImage" />
+				<Label id="gameTitle" />
+			</View>
+			<View id="gameButtonsView" layout="vertical">
+				<Button id="gameAcceptButton" onClick="connect" />
+				<Button id="cancelButton" onClick="close" />
+			</View>
+		</View>
+	</Window>
+</Alloy>

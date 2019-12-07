@@ -1,0 +1,45 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent"
+}
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+".background" : {
+	backgroundColor: "#000000",
+	opacity: 0
+}
+".mainView" : {
+	width: Ti.UI.FILL,
+	backgroundColor: "#ffffff",
+	bottom: -292,
+	height: 292
+}
+".topbar" : {
+	width: Ti.UI.FILL,
+	height: 50,
+	top: 0,
+	backgroundColor: "#e54353"
+}
+".closeIcon" : {
+	width: 40,
+	height: 40,
+	padding: 50
+}
+".priorityButton" : {
+	top: 0,
+	width: Ti.UI.FILL,
+	height: 60,
+	textAlign: "left"
+}
+"#ethereumFees" : {
+	top: 0
+}
+"#bitcoinFees" : {
+	top: 0
+}
+".checkedIcon" : {
+	width: 25,
+	height: 25
+}

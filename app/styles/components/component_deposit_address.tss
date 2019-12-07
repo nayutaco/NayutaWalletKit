@@ -1,0 +1,41 @@
+"#depositAddressViewOuter" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+}
+"#depositAddressViewBackgroundOuter" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	opacity:0.8,
+	backgroundColor: 'black'
+}
+"#depositAddressView" : {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+"#closeButton" : {
+	top: 10,
+	height: Alloy.Globals.topBarHeight,
+}
+"#description":{
+	color: Alloy.Globals.mainColorDarker,
+}
+".address" : {
+	top: 15,
+	color: Alloy.Globals.mainColorDarker,
+	font: {
+		fontFamily: "Helvetica Neue",
+		fontSize: 11,
+		fontWeight: "lightl"
+	}
+}
+".qrcodeImage" : {
+	top: 15,
+	width: 250,
+	height: 250,
+	margin: 15
+}
+
+"#spinner" : {
+  indicatorColor: Alloy.Globals.mainColor,
+  style: Ti.UI.ActivityIndicatorStyle.BIG
+}

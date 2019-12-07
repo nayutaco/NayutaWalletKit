@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="cell">
+		<View class="cellInner">
+			<View class="details" layout="horizontal">
+				<ImageView id="statusImage" />
+				<Label id="pubKey" class="pubKeyTitle" />
+			</View>
+			<View id="amountsBarOuter">
+				<View id="amountsBarLocal" />
+				<View id="amountsBarRemote" />
+				<View id="amountsLabel">
+					<View class="localAmounts">
+						<Label id="localAmount" class="localAmountTitle" />
+						<Label id="localAmountFiat" class="localAmountTitleFiat" />
+					</View>
+					<View class="remoteAmounts">
+						<Label id="remoteAmount" class="remoteAmountTitle" />
+						<Label id="remoteAmountFiat" class="remoteAmountTitleFiat" />
+					</View>
+				</View>
+			</View>
+		</View>
+	</View>
+</Alloy>

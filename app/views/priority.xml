@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="transparent">
+			<View class="tifill background" id="background" onClick="close" />
+			<View class="mainView" id="mainView" layout="vertical">
+				<View class="topbar" id="topbar">
+					<ImageView class="closeIcon pull-right" id="closeIcon" image="/images/icon_close_main_color.png" onClick="close" />
+				</View>
+				<View class="separator" />
+				<View id="bitcoinFees" class="tisize" visible="false" layout="vertical">
+					<View class="priorityButton" id="highButton">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" touchEnabled="false">L("label_priority_high")</Label>
+							<Label class="size10 pull-left" id="highDesc" touchEnabled="false">L("label_priority_high_description")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedHigh" image="/images/icon_checked.png" visible="false" />
+					</View>
+					<View class="priorityButton" id="medButton">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" touchEnabled="false">L("label_priority_med")</Label>
+							<Label class="size10 pull-left" id="medDesc" touchEnabled="false">L("label_priority_med_description")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedMed" image="/images/icon_checked.png" visible="false" />
+					</View>
+					<View class="priorityButton" id="lowButton">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" touchEnabled="false">L("label_priority_low")</Label>
+							<Label class="size10 pull-left" id="lowDesc" touchEnabled="false">L("label_priority_low_description")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedLow" image="/images/icon_checked.png" visible="false" />
+					</View>
+					<View class="separator" />
+					<View class="priorityButton" id="customButtonBtc">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" touchEnabled="false">L("label_priority_custom")</Label>
+							<Label class="size10 pull-left" touchEnabled="false">L("label_priority_custom_description")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedCustom" image="/images/icon_checked.png" visible="false" />
+					</View>
+				</View>
+				<View id="ethereumFees" class="tisize" visible="false" layout="vertical">
+					<View class="priorityButton" id="recommendedEthButton">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" id="recommendedEthLabel" touchEnabled="false">L("label_recommended_gas_eth")</Label>
+							<Label class="size10 pull-left" id="highDesc" touchEnabled="false">L("label_recommended_gas_eth_desc")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedHighEth" image="/images/icon_checked.png" visible="false" />
+					</View>
+					<View class="separator" />
+					<View class="priorityButton" id="customButtonEth">
+						<View class="tisize pull-left" layout="vertical" touchEnabled="false">
+							<Label class="size15 bold pull-left" touchEnabled="false">L("label_custom_gas_price")</Label>
+							<Label class="size10 pull-left" touchEnabled="false">L("label_custom_gas_price_description")</Label>
+						</View>
+						<ImageView class="checkedIcon pull-right" id="checkedCustomEth" image="/images/icon_checked.png" visible="false" />
+					</View>
+				</View>
+			</View>
+		</View>
+	</Window>
+</Alloy>

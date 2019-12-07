@@ -1,0 +1,102 @@
+
+"#win[platform=android]" : {
+  "windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+"#win" : {
+  navBarHidden: true,
+}
+".mainView" : {
+  width: "100%", 
+  height:Ti.UI.FILL, 
+  backgroundColor:"white",
+}
+
+"#walletName[if=Alloy.Globals.isiPhoneX]": {
+  top: Alloy.Globals.headerTopIphoneX,
+  right: Alloy.Globals.headerRight,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.subTitleFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+"#walletName": {
+  top: Alloy.Globals.headerTop,
+  right: Alloy.Globals.headerRight,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.subTitleFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+"#nodeInfo" : {
+	top: 0,
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL, 
+}
+
+".mainView[platform=android]" : {
+  width: "100%",
+  left: 0,
+  top:0,
+  height:Ti.UI.FILL,
+  backgroundColor:"white",
+}
+".background" : {
+  backgroundColor: "#000000",
+  opacity: 0
+}
+
+"#closeButton":{
+	top: 0,
+	height: Alloy.Globals.topBarHeight,
+	right:15,
+  color: "black",
+  font: {
+    fontSize: 18,
+    fontFamily: 'GillSans',
+    fontWeight: 'bold'
+  }
+}
+"#bottom" : {
+  bottom: 0,
+  height: Ti.UI.SIZE
+}
+ 
+"#table" : {
+  top: 100,
+	separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE, 
+  width: Ti.UI.FILL,
+  height:Ti.UI.FILL, 
+}
+".headerView" : {
+  backgroundColor: Alloy.Globals.mainColor,
+  height: 35,
+  width: "100%"
+}
+"#showPeersButton" : {
+  color: 'white',
+  font: {
+    fontSize: 20,
+    fontFamily: 'GillSans',
+    fontWeight: 'bold'
+  },
+  top: 25,
+  left: 5
+}
+
+".addChannel" : { 
+ width:"100%",
+ height:100, 
+}
+
+"#firstLoader" : {
+  indicatorColor: Alloy.Globals.mainColor,
+  style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+
+"#noChannels":{ 
+  textAlign:"center",
+  visible:false
+}
+ 

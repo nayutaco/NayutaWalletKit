@@ -1,0 +1,183 @@
+
+"#win":{
+     navBarHidden : true, 
+}
+".background":{
+ backgroundColor:"#282828"
+}
+"#controls":{ 
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+    layout:"vertical"
+}
+
+".backgroundInner":{
+    backgroundColor:"#282828"
+}
+
+"#laptopToMobile":{
+    image:"/images/laptopToMobile.png",
+    width:"90%",
+    bottom:60
+}
+
+
+
+".nextButton":{
+    textAlign:"center",
+    color:'white',
+    bottom:15,
+    right:15, 
+    text:"next",
+    font: {
+		fontSize: 20,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+".title":{ 
+    textAlign:"center",
+    color:'#68bede',  
+    font: {
+		fontSize: 50,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    top:500,  
+}
+"#title1":{
+   top:35, 
+   font: {
+   fontSize: 30,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},   
+}
+"#title2":{
+   top:35,    
+}
+
+".description":{
+    textAlign:"center",
+    color:'white',
+    top:135,  
+    width:"80%", 
+    font: {
+		fontSize: 20,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	}
+}
+
+".descriptionSmall":{
+    textAlign:"center",
+    color:'white',
+    top:135,  
+    width:"80%", 
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	}
+}
+
+".moreInfo":{
+ textAlign:"center",
+    color:'#7ab6f2',
+    bottom:125,  
+    width:"80%", 
+    font: {
+		fontSize: 15,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	}
+}
+
+
+
+
+"#controlsInner":{ 
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+"#status":{ 
+    textAlign:"center",
+    color: "white",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+    font: {
+      fontSize: 18,
+      fontFamily: 'GillSans',
+      fontWeight: 'light'
+    }
+}
+        
+"#downloadGoogleDrive":{
+    title:L('download_google_drive')
+}
+
+"#close":{
+    top: 0,
+	height: Alloy.Globals.topBarHeight,
+	left:15,
+    color: "white",
+    font: {
+      fontSize: 18,
+      fontFamily: 'GillSans',
+      fontWeight: 'light'
+    }
+}
+
+"#reset":{
+    top: 0,
+	height: Alloy.Globals.topBarHeight,
+	right:15,
+    color: "white",
+    font: {
+      fontSize: 18,
+      fontFamily: 'GillSans',
+      fontWeight: 'light'
+    }
+}
+
+
+
+"#checkSumView":{
+  width:Ti.UI.SIZE,
+  height:Ti.UI.SIZE,
+  layout:"vertical",
+  visible:false
+}
+
+"#checkSumDescLabel":{
+    textAlign:"center",
+    color: "white",
+    width:"80%",
+    height:Ti.UI.SIZE,
+    font: {
+      fontSize: 18,
+      fontFamily: 'GillSans',
+      fontWeight: 'bold'
+    }
+}
+
+"#checkSumLabel":{
+    top:20,
+     textAlign:"center",
+    color: "white",
+    width:"80%",
+    height:Ti.UI.SIZE,
+    font: {
+      fontSize: 20,
+      fontFamily: 'GillSans',
+      fontWeight: 'light'
+    }
+}
+
+"#unZipButton":{
+     top:30,
+     title:L('unzip')
+}
+
+		 
+ 

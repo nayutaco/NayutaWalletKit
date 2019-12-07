@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View class="tifill background" id="background">
+          
+<TextArea class="config" id="config">
+                    
+    </TextArea>
+
+    <View class="buttons">
+    <Label class="aButton" onClick="close">cancel</Label>
+    <Label class="aButton" onClick="save">save</Label>
+    </View>
+    
+    </View>
+   </Window>
+</Alloy>

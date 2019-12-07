@@ -1,0 +1,29 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent"
+}
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+".background" : {
+	backgroundColor: "#000000",
+	opacity: 0
+}
+".mainView" : {
+	width: Ti.UI.FILL,
+	height: 292,
+	backgroundColor: "#ffffff",
+	bottom: -292
+}
+".topbar" : {
+	width: Ti.UI.FILL,
+	height: 50,
+	top: 0,
+	backgroundColor: Alloy.Globals.mainColor
+}
+".closeIcon" : {
+	width: 40,
+	height: 40,
+	padding: 50
+}

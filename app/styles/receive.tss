@@ -1,0 +1,112 @@
+
+"#win" : {
+  "orientationModes": [Ti.UI.PORTRAIT],
+  "navBarHidden": true, 
+}
+ 
+"#win[platform=android]" : {
+  "windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+".mainView" : {
+  width: "100%",
+  left: Alloy.Globals.display.width,
+  backgroundColor: "white"
+}
+".mainView[platform=android]" : {
+  width: "100%",
+  left: 0
+}
+".background" : {
+  backgroundColor: "#000000",
+  opacity: 0
+}
+
+".receiveView" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+".receiveViewOuter" : {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	top: 0
+}
+
+"#buttonsView":{
+	top:20,
+	layout: 'vertical',
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+"#description" : {
+	top: 10
+}
+ 
+"#generateDepositAddressDesc" : { 
+	width: "90%",
+	top:60,
+	color: Alloy.Globals.nayutaDark, 
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontWeight: "light",
+		fontSize: 15
+	}
+}
+"#pattern":{
+	top:0,
+	width:"100%", 
+} 
+
+"#walletButton":{
+	top: 0,
+	height: Alloy.Globals.topBarHeight,
+	font:Alloy.Globals.buttonFont,
+	right:15,
+}
+
+"#depositAddressView":{
+	visible:false,
+
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+
+"#description":{
+	color:Alloy.Globals.nayutaDark,
+}
+"#address" : {
+	top: 15,
+	color: Alloy.Globals.nayutaDark,
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontWeight: "light",
+		fontSize: 12
+	}
+}
+".qrcodeImage" : {
+	top: 15,
+	width: 250,
+	height: 250,
+	margin: 15
+}
+
+"#spinner" : {
+  indicatorColor: Alloy.Globals.nayutaDark,
+  style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+
+
+".generateView":{
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	layout:"vertical"
+}
+
+".seperator1":{
+	bottom:40,
+	width:"70%",
+	height:1,
+	opacity:0.7,
+	backgroundColor:"#454647"
+}
+ 
+ 

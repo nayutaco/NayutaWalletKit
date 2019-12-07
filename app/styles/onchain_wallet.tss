@@ -1,0 +1,205 @@
+"#win" : {
+  "orientationModes": [Ti.UI.PORTRAIT],
+  "navBarHidden": true, 
+}
+".header":{
+  height:400,
+  width:500, 
+  backgroundColor:"transparent"
+}
+"#gobackButton" : {
+  top: 0,
+  height: Alloy.Globals.topBarHeight,
+  font:Alloy.Globals.buttonFont,
+  left: 10
+}
+"#win[platform=android]" : {
+  "windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+"#pattern":{
+	top:0,
+	width:"100%", 
+} 
+".mainView" : {
+  width: "100%",
+  left: Alloy.Globals.display.width,
+  height: Ti.UI.FILL,
+  backgroundColor:"white"
+}
+".mainView[platform=android]" : {
+  width: "100%",
+  left: 0
+}
+".background" : {
+  backgroundColor: "#000000",
+  opacity: 0
+}
+
+"#closeButton":{
+	top: 0,
+	height: Alloy.Globals.topBarHeight,
+  font:Alloy.Globals.buttonFont,
+	left:15,
+}
+
+"#sendButton":{
+	top: 0,
+	height: Alloy.Globals.topBarHeight,
+  font:Alloy.Globals.buttonFont,
+	right:15,
+}
+
+"#channelsFunds" : {
+  top: Alloy.Globals.btclnTopBarHeight
+}
+"#channels" : {
+  top: 0,
+  height: Ti.UI.FILL
+}
+"#funds" : {
+  visible: false
+}
+".topBarTop" : {
+  top: 0,
+  height: 400,
+  width: "100%", 
+  backgroundColor:"transparent"
+}
+
+"#statusText" : { 
+  font: {
+    fontFamily: "Gil sans",
+    fontSize: 16
+  }
+}
+".fiatValue" : { 
+}
+".cryptoValue" : { 
+  width: "100%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+".info" : {
+  height: "100%",
+  width: "100%", 
+}
+".infoInner" : {
+  layout: "vertical",
+  height: Ti.UI.SIZE,
+  width: "100%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, 
+}
+".switchTab" : {
+  width: "100%",
+  height: 40,
+  top: 0,
+  layout: 'horizontal'
+}
+".aSwitch" : {
+  width: "50%",
+  height: "100%",
+  font: {
+    fontFamily: Alloy.Globals.lightFont,
+    fontSize: 16
+  },
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+".balanceTitle" : { 
+  font: {
+    fontFamily: Alloy.Globals.lightFont,
+    fontSize: 16
+  }
+}
+"#channelsTab" : {
+  color: Alloy.Globals.fontColor1,
+  text: L('label_channels'),
+  backgroundColor: Alloy.Globals.mainColorDarker
+}
+"#fundsTab" : {
+  color: Alloy.Globals.fontColor1,
+  text: L('label_deposit'),
+  backgroundColor: Alloy.Globals.mainColorLighter,
+  opacity: 0.5
+}
+
+
+
+"#listTopSpinner":{
+	indicatorColor: Alloy.Globals.mainColor,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	style: Ti.UI.ActivityIndicatorStyle.PLAIN,
+	bottom: 0
+}
+
+"#onChainBalanceSpinner":{
+	indicatorColor: Alloy.Globals.mainColor,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	style: Ti.UI.ActivityIndicatorStyle.PLAIN, 
+}
+
+".paymentList" : {
+	top: 0,
+	backgroundColor: "transparent",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE
+}
+".paymentList[platform=ios]" : {
+	selectionStyle: Titanium.UI.iOS.TableViewCellSelectionStyle.NONE
+}
+".paymentList[platform=android]" : {
+	selectionStyle: 'none'
+}
+ 
+
+".seperator1":{
+	bottom:40,
+	width:"70%",
+	height:1,
+	opacity:0.7,
+	backgroundColor:"#454647"
+}
+
+"#noTransactions":{
+  bottom:0, 
+  height: Ti.UI.SIZE,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	width: "80%",
+	color: 'gray', 
+	visible: false,
+	font:{
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18,
+	}
+}
+ 
+".options":{
+	top:40,
+  bottom:40,
+	layout:"horizontal",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+
+".payButton":{
+	textAlign:"center",
+	width:110, 
+	height:30,
+	left:15,
+	borderColor: "#454647",
+	borderWidth: 1,
+	borderRadius: 15,
+}
+
+".receiveButton":{ 
+	textAlign:"center",
+	width:110, 
+	height:30,
+	color:"white",
+	backgroundColor: "#454647",
+	borderColor: "#454647",
+	borderWidth: 1,
+	borderRadius: 15,
+}
+

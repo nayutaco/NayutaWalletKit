@@ -1,0 +1,20 @@
+<Alloy>
+   <Window id="signin" class="container">
+      <View class="tifill wrapper" id="wrapper">
+         <View id="signinView">
+            <ImageView class="logo" id="logo" image="/images/icon_logo_white.png" />
+            <ActivityIndicator id="loadingSpinner" />
+            <View id="buttons" visible="false">
+               <View class="button newwallet" id="newwalletButton" onClick="createNewAccount" accessibilityLabel="Create New Wallet">
+                  <Label class="containedButton">L("label_newwallet")</Label>
+               </View>
+               <View class="button hasuser" id="hasuserButton" onClick="hasPassphrase">
+                  <Label class="outlinedButton">L("label_loginasuser")</Label>
+               </View>
+            </View>
+         </View>
+      </View>
+	   <View platform="android" class="overlay" /> 
+	 
+   </Window>
+</Alloy> 

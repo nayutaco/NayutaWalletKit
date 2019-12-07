@@ -1,0 +1,49 @@
+".mainView":{
+	backgroundColor:"transparent",
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL
+}
+
+
+"#colorView":{
+	borderRadius:5,
+	backgroundColor:"#71ab3a",
+	height:10,
+	width:10,
+	bottom:0,
+	opacity:1,
+}
+
+".checkIcon":{
+	image:"/images/largeTick.png",
+	width:"50%",
+
+}
+
+
+"#infoView":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.FILL,
+	layout:"vertical",
+	opacity:0,
+}
+
+
+".statusLabel":{
+	top:20,
+	width: "90%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color:"white",
+ 	font:{
+ 		fontSize:17,
+ 	}
+}
+
+"#okLabel":{
+ 	opacity:0,
+ 	bottom:Alloy.Globals.bottomButtonPos,
+ 	color:"white",
+ 	font:{
+ 		fontSize:20,
+ 	}
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View id="mainView" class="mainView">
+		<TableView class="paymentList" id="paymentList">
+			<HeaderView>
+				<View class="info" id="info">
+					<View class="infoInner">
+						<View class="balances">
+							<Label class="cryptoValue" id="totalBalance" />
+							<Label class="fiatValue" id="totalBalanceFiat" />
+						</View>
+						<View class="options">
+							<Label class="receiveButton" onClick="showReceive">L('receive')</Label>
+							<Label class="payButton" onClick="showPay">L('pay')</Label>
+						</View>
+					</View>
+					<View class="seperator1" />
+					<Label id="noTransactions">L("no_transactions")</Label>
+					<ActivityIndicator id="listTopSpinner" visible="false" />
+				</View>
+			</HeaderView>
+			<FooterView>
+				<View class="tableViewFooter" id="tableViewFooter" visible="false">
+					<View class="tisize" layout="horizontal">
+						<ActivityIndicator class="indicatorDark" visible="true" />
+						<Label class="loadingLabelFooter">L("label_loading")</Label>
+					</View>
+				</View>
+			</FooterView>
+		</TableView>
+	</View>
+</Alloy>

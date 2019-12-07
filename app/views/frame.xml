@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<TabGroup id="tabGroup">
+		<Tab id="lightning" onSelected="selectLightning">
+			<Window class="container" id="win">
+				<Require id="transactions" src="transactions" />
+				<Widget src="de.manumaticx.circularprogress" id="progress" />
+				 <View id="centerControls">
+                  <View id="centerButton">
+                     <Label id="valueLabel" />
+                     <Label id="percentageLabel" />
+                  </View>
+                  <Label id="statusLabel" />
+               </View>
+				<View id="syncStatus">
+					<Label id="syncPercentage" />
+					<Label id="syncText">L('syncing_text')</Label>
+					<Label id="syncTextDescription">L('syncing_text_description')</Label>
+				</View>				
+				<ActivityIndicator id="connecting" />
+				<Label id="statusText" /> 
+				<Label id="fullnodeIcon">L('running_core')</Label>
+				<View platform="android" class="overlay" />
+				<ImageView id="nayutaIcon" class="nayutaIcon" /> 
+				<View id="smallSync">
+					<ActivityIndicator id="smallSyncSpinner"/>
+					<Label id="smallSyncLabel">L("synchronizing_small")</Label>
+				</View>
+				<ImageView id="bluetoothIcon" image="/images/bluetoothIconSmall.png"/>
+			</Window>
+        </Tab>
+        <Tab id="onChain" onSelected="loadOnChain">
+            <Require id="onChainWallet" class="container" src="onchain_wallet" />
+        </Tab>
+		<Tab id="channels" onSelected="loadChannels">
+            <Require id="channelsPage" class="container" src="channels" />
+        </Tab>
+		<Tab id="settings" onSelected="selectedSettings" onUnselected="unSelectedSettings">
+            <Require id="settingsPage" class="container" src="settings" />
+        </Tab>
+        
+    </TabGroup>
+</Alloy>

@@ -1,0 +1,40 @@
+"#win":{
+    navBarHidden : true, 
+}
+ 
+".background":{
+    backgroundColor:"#2828288"
+}
+ 
+ 
+".config":{
+    top:0, 
+    color:"black",
+    height:"90%",
+    width:"100%", 
+    backgroundColor:"white"
+    
+}
+".buttons":{
+    bottom:0, 
+    height:"10%",
+    width:"100%",
+    layout:"horizontal", 
+    
+}
+
+".aButton":{
+     height:"100%",
+    width:"50%", 
+    color:"white",
+    font: {
+		fontSize: 22,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    textAlign:"center"
+    
+}
+ 
+ 
+ 

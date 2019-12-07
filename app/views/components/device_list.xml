@@ -1,0 +1,33 @@
+<Alloy>
+    <Window class="container" id="win" onPostlayout="startScan"> 
+    <View class="mainView">
+    <Label id="close" onClick="close">L('label_close')</Label>
+    <Label id="refresh" onClick="reload">L('label_reload')</Label>
+        <ListView id="deviceList" onItemclick="handleClick" defaultItemTemplate="deviceTemplate">
+            <ListSection name="devices" />
+            <Templates>
+        <ItemTemplate name="deviceTemplate">
+            <Label bindId="device" id="device" width="80%" />
+            
+			 <Label bindId="connect" id="connect" />
+        </ItemTemplate>
+    </Templates>
+        </ListView>
+        <Label id="waitingDevices">L('searching_device')</Label>
+        
+        <View id="connectingView">
+        <View id="connectingViewBackground"/>
+        <View id="connectingViewInner">
+        
+        <ActivityIndicator id="connectingSpinner" />
+         <Label id="connectingLabel">L('connecting')</Label>
+        <Label id="connectedLabel">L('connected')</Label>
+         <View id="autoConnectView"><Label id="autoConnectLabel">L('auto_connect')</Label><Switch id="optionSwitch" value="false" onChange="setAutoConnect" /></View>
+       
+       
+         <Label id="closeConnecting" onClick="closeConnecting">L('label_close')</Label>
+         </View>
+         </View>
+        </View>
+    </Window>
+</Alloy>

@@ -1,0 +1,61 @@
+"#win" : {
+  orientationModes: [Ti.UI.PORTRAIT],
+  navBarHidden: true,
+  backgroundColor: "transparent",
+  width: Ti.UI.FILL,
+  height: Alloy.Globals.display.height
+}
+"#win[platform=android]" : {
+  theme: "Theme.AppCompat.Translucent.NoTitleBar",
+  windowSoftInputMode: Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN,
+  height: Ti.UI.FILL
+}
+"#main" : {
+  width: Ti.UI.FILL,
+  height: Alloy.Globals.display.height,
+  top: Alloy.Globals.display.height
+}
+"#main[platform=android]" : {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  top: Alloy.Globals.display.height
+}
+".group" : {
+  layout: "vertical",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+".touchid" : {
+  image: "/images/fingerPrint.png",
+  width: 70,
+  top: 0
+}
+"#instructionLabel" : {
+  color: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 15
+  },
+  top: 10,
+  color: Alloy.Globals.mainColor,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  text: L('unlock_fingerprint')
+}
+
+"#usePassCode" : {
+  color: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 15
+  },
+  bottom: 180,
+  color: Alloy.Globals.mainColor,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  text: L('use_passcode')
+}
+
+".back" : {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  top: 0,
+  backgroundColor: "#ffffff",
+  opacity: 1
+}

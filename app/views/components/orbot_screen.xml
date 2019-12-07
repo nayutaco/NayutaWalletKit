@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View id="mainView">
+			<ImageView class="background" />
+			<View id="detailsView">
+				<ImageView id="orbotLogo" />
+				<Label id="guide_title">L("orbot_text1")</Label>
+				<Label id="guide_text">L("orbot_text2")</Label>
+				<Label id="downloadButton" onClick="download" />
+				<Label id="backButton" onClick="close"/>
+			</View>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window class="container" id="win">
+		<View id="main">
+			<View class="back">
+				<View class="group">
+					<ImageView class="logo" />
+					<Label id="instructionLabel" />
+					<View class="marks">
+						<ImageView class="comp_marks" id="m1" />
+						<ImageView class="comp_marks" id="m2" />
+						<ImageView class="comp_marks" id="m3" />
+						<ImageView class="comp_marks" id="m4" />
+						<ImageView class="comp_marks" id="m5" />
+						<ImageView class="comp_marks" id="m6" />
+					</View>
+					<View class="buttons">
+						<View class="buttonRow">
+							<Button class="aButton" id="n1" onTouchstart="pressedButton" accessibilityLabel="keypad1" />
+							<Button class="aButton" id="n2" onTouchstart="pressedButton" accessibilityLabel="keypad2"/>
+							<Button class="aButton" id="n3" onTouchstart="pressedButton" accessibilityLabel="keypad3"/>
+						</View>
+						<View class="buttonRow">
+							<Button class="aButton" id="n4" onTouchstart="pressedButton" accessibilityLabel="keypad4"/>
+							<Button class="aButton" id="n5" onTouchstart="pressedButton" accessibilityLabel="keypad5"/>
+							<Button class="aButton" id="n6" onTouchstart="pressedButton" accessibilityLabel="keypad6"/>
+						</View>
+						<View class="buttonRow">
+							<Button class="aButton" id="n7" onTouchstart="pressedButton" />
+							<Button class="aButton" id="n8" onTouchstart="pressedButton" />
+							<Button class="aButton" id="n9" onTouchstart="pressedButton" />
+						</View>
+						<View class="buttonRow">
+							<Button class="aButton" id="c" onTouchstart="pressedButton" visible="false" />
+							<Button class="aButton" id="n0" onTouchstart="pressedButton" />
+							<Button class="aButton" id="e" onTouchstart="pressedButton" />
+						</View>
+					</View>
+				</View>
+			</View>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="transparent">
+			<View class="tifill background" id="background" />
+			<View class="tifill mainView" id="mainView">
+				<View platform="android" class="overlay" /> 
+				 
+				<Label class="backButton pull-left pull-bottom" id="gobackButton" onClick="close">L("label_goback")</Label>
+				<Label class="title">L("label_accounts")</Label>
+				 
+				<TableView class="accountsList" id="accountsList">
+					 
+				</TableView>
+			</View>
+		</View>
+	</Window>
+</Alloy>

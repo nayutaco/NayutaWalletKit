@@ -1,0 +1,139 @@
+".wrapper" : {
+	backgroundColor: "white"
+}
+"#loadingSpinner" : {
+	width: Ti.UI.SIZE,
+	height: 0,
+	visible: false,
+	bottom: 50,
+    style: Ti.UI.ActivityIndicatorStyle.BIG,
+	indicatorColor:Alloy.Globals.nayutaDark
+}
+".logo" : {
+	width: 180,
+	top: 0
+}
+"#recoverView":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+}
+"#linkView":{
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+".button" : {
+	height: Ti.UI.SIZE,
+	layout:"vertical",
+}
+ 
+".thinline":{
+	 height:1,
+	 width: "100%",
+	 backgroundColor:"black", 
+ }
+".newwallet" : {
+	bottom: 120
+}
+".hasuser" : {
+	bottom: 50
+}
+".signin" : {
+	top: 210,
+	opacity: 0, 
+}
+
+".inputs" : {
+	width: "100%",
+	top: 5,
+	opacity: 0,
+	layout: 'vertical'
+}
+".inputFullPassphrase" : {
+	top: 0,
+	width: 300
+}
+".inputEachphrase" : {
+	top: 30,
+	left: 500,
+	width: 200,
+	opacity: 0
+}
+".textmenues" : {
+	top: 90
+}
+".link" : {
+	layout: 'vertical',
+	top: 20
+}
+".buttonTitle":{
+	color:"black",
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 20
+	}
+}
+".recoverTitle" : {
+	top: 0,
+	color: "white",
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18
+	}
+}
+".orTitle" : {
+	top:130,
+	color: "white",
+	opacity: 0.6,
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18
+	}
+}
+".connectNodeTitle" : {
+	top: 15,
+	width: "80%",
+	color: "white",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18
+	}
+}
+".icons" : {
+	layout: 'horizontal'
+}
+".btcPayIcon" : {
+	image: "/images/btcPayServerIcon.png",
+	height: 60
+}
+".lndIcon" : {
+	image: "/images/lndIcon.png",
+	height: 50,
+	left: 20
+}
+".foundOutMore" : {
+	top: 20,
+	color: "white",
+	width: "80%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontFamily: Alloy.Globals.lightFontItalic,
+		fontStyle: "italic",
+		fontWeight: "italic",
+		fontSize: 16
+	}
+}
+".cancelLabel" : {
+	top: 30,
+	color: "white",
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 18
+	},
+	opacity: 0.6,
+}
+"#connectView" : {
+	top: 20,
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE
+} 

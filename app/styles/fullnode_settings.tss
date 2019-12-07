@@ -1,0 +1,89 @@
+"#win":{
+    navBarHidden : true, 
+}
+ 
+".background":{
+    backgroundColor:"#33e5a8"
+}
+
+".backgroundInner":{
+    backgroundColor:"#282828"
+} 
+".option":{
+    width:"100%",
+    height:80,
+     top:10, 
+}
+
+".optionBackground":{
+    width:Ti.UI.FILL,
+    height:Ti.UI.FILL,
+    backgroundColor:"white",
+    opacity:0.1
+}
+
+".innerView":{
+    top:0,
+    layout:"vertical", 
+    height:Ti.UI.SIZE,
+    width:"100%", 
+    
+}
+
+"#backButton":{
+    textAlign:"center",
+    color:'white',
+    top:10,
+    left:15, 
+    text:"next",
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+".options":{
+    top:30,
+    layout:"vertical", 
+    height:Ti.UI.SIZE,
+    width:"100%",
+ 
+}
+
+".optionLabel":{
+    color:"white",
+    font: {
+		fontSize: 22,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    left:10
+}
+
+".optionDescription":{
+    color:"white",
+    font: {
+		fontSize: 14,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    left:10,
+    width:"70%",
+    opacity:0.6
+}
+
+".optionLabels":{
+    layout:"vertical",  
+    height:Ti.UI.SIZE,
+    width:"100%",
+}
+
+".optionSwitch":{
+    right:10
+}
+
+".optionButton":{
+    right:15,
+    image:"images/rightArrow.png",
+    width:15,
+    height:40
+}

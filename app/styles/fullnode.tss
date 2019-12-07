@@ -1,0 +1,333 @@
+"#win":{
+    navBarHidden : true, 
+}
+"#progress" : { 
+    width:Alloy.Globals.display.width70,
+    height:Alloy.Globals.display.width70,
+	margin:4,
+	backgroundColor:'#282828',
+	progressColor:'#33b5e5',
+	progressBackgroundColor:'#454545',
+    progressGradient:{
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '0%', y: '0%' },
+        colors: [ { color: '#33b5e5', offset: 0.0}, { color: '#68bede', offset: 0.7 } ],
+    },
+	progressWidth: 15,
+	showText: false,
+	color: '#33b5e5',
+	font: {
+		fontSize: 26,
+		fontFamily: 'Roboto Condensed'
+	}
+}
+
+"#progressGreen" : { 
+    visible:false,
+    width:Alloy.Globals.display.width70,
+    height:Alloy.Globals.display.width70,
+	margin:4,
+	backgroundColor:'#282828',
+	progressColor:'#33e5a8',
+	progressBackgroundColor:'#454545',
+    progressGradient:{
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '0%', y: '0%' },
+        colors: [ { color: '#33e5a8', offset: 0.0}, { color: '#79debc', offset: 0.7 } ],
+    },
+	progressWidth: 15,
+	showText: false,
+	color: '#33b5e5',
+	font: {
+		fontSize: 26,
+		fontFamily: 'Roboto Condensed'
+	}
+}
+
+".background":{
+    backgroundColor:"#33e5a8"
+}
+
+".backgroundInner":{
+    backgroundColor:"#282828"
+}
+"#centerButton":{
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE
+}
+"#valueLabel":{
+    top:10,
+    width:Ti.UI.SIZE,
+    height:70, 
+    textAlign:"center",
+    color:'#68bede',
+    font: {
+		fontSize: 20,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+"#percentageLabel":{
+    top:0,
+    width:Ti.UI.SIZE, 
+    height:70,
+    textAlign:"center",
+    color:'#68bede',
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#centerControls":{
+   width:Ti.UI.SIZE,
+   height:Ti.UI.SIZE,
+   layout:"vertical"
+}
+
+
+"#deleteButton":{
+    textAlign:"center",
+    color:'white',
+    top:10,
+    right:15, 
+    text:"next",
+    opacity:0.8,
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#settings":{
+    textAlign:"center",
+    color:'white',
+    top:10,
+    right:15, 
+    text:"next",
+    opacity:0.8,
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+ 
+"#stopButton":{
+    textAlign:"center",
+    color:'white', 
+    top:0,
+    height:0, 
+    opacity:0.8,
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#backButton":{
+    textAlign:"center",
+    color:'white',
+    top:10,
+    left:15, 
+    text:"next",
+    opacity:0.8,
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+"#statusLabel":{
+    textAlign:"center",
+    color:'white',
+    top:10,
+    opacity:0.4,
+    font: {
+		fontSize: 15,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#fullNode":{
+    image:"/images/fullNodeIcon.png",
+    width:"90%",
+    bottom:30
+}
+
+"#bitcoin":{
+    image:"/images/bitcoinDataImage.png",
+    width:"90%",
+    bottom:30
+}
+
+"#bitcoinBeta":{
+    image:"/images/warningMobile.png",
+    width:"90%",
+    bottom:80
+}
+
+".nextButton":{
+    textAlign:"center",
+    color:'white',
+    bottom:15,
+    right:15, 
+    text:"next",
+    font: {
+		fontSize: 20,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+".title":{ 
+    textAlign:"center",
+    color:'#68bede',  
+    font: {
+		fontSize: 50,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    top:500,  
+}
+"#title1":{
+   top:35,    
+}
+"#title2":{
+   top:35,    
+}
+
+".description":{
+    textAlign:"center",
+    color:'white',
+    top:115,  
+    width:"90%", 
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	}
+}
+
+".loadingSection":{
+     width:Ti.UI.SIZE,
+   height:Ti.UI.SIZE, 
+}
+
+".option":{
+    width:"100%",
+    height:80,
+     top:10, 
+}
+
+".optionBackground":{
+    width:Ti.UI.FILL,
+    height:Ti.UI.FILL,
+    backgroundColor:"white",
+    opacity:0.1
+}
+
+".innerView":{
+    layout:"vertical", 
+    height:Ti.UI.SIZE,
+    width:"100%", 
+    
+}
+".options":{
+    top:30,
+    layout:"vertical", 
+    height:Ti.UI.SIZE,
+    width:"100%",
+ 
+}
+
+".optionLabel":{
+    color:"white",
+    font: {
+		fontSize: 22,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    left:10
+}
+
+".optionDescription":{
+    color:"white",
+    font: {
+		fontSize: 14,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    left:10,
+    width:"70%",
+    opacity:0.6
+}
+
+".optionLabels":{
+    layout:"vertical",  
+    height:Ti.UI.SIZE,
+    width:"100%",
+}
+
+".optionSwitch":{
+    right:10
+}
+
+".optionButton":{
+    right:15,
+    image:"/images/rightArrow.png",
+    width:15,
+    height:40
+}
+
+".titleOptions":{
+    left:15,
+    top:20,
+     color:"white",
+    font: {
+		fontSize: 14,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+}
+
+".titleButton":{
+
+
+}
+"#lite":{
+  title:L("lite_mode_description")
+}
+"#always":{
+  title:L("always_mode_description")
+}
+
+"#never":{
+  title:L("never_mode_description")
+}
+
+".optionButtons":{
+    layout:"horizontal",  
+    height:Ti.UI.SIZE,
+    width:Ti.UI.SIZE,
+    top:10,
+}
+
+"#neutrino":{ 
+      title:L("neutrino_mode_description")
+}
+
+"#bitcoind":{
+    left:10,
+    title:L("bitcoin_mode_description")
+}
+
+"#testnet":{
+    textAlign:"center",
+    color:'white',
+    top:10, 
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	},
+    visible:false
+}

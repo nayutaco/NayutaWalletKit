@@ -1,0 +1,51 @@
+"#win":{
+    navBarHidden : true, 
+}
+ 
+".background":{
+    backgroundColor:"#2828288"
+}
+ 
+ 
+".console":{
+    top:0, 
+    color:"black",
+    height:"80%",
+    width:"100%", 
+    backgroundColor:"white"
+    
+}
+".command":{
+    top:"80%", 
+    color:"black",
+    height:"10%",
+    width:"100%", 
+    backgroundColor:"lightgray",
+    hintText:"enter command i.e. getblockchaininfo",
+    hintTextColor:"gray"
+    
+}
+
+".buttons":{
+    bottom:0, 
+    height:"10%",
+    width:"100%",
+    layout:"horizontal", 
+    
+}
+
+".aButton":{
+     height:"100%",
+    width:"50%", 
+    color:"white",
+    font: {
+		fontSize: 22,
+		fontFamily: Alloy.Globals.lightFont,
+        fontWeight:"ultra-light"
+	},
+    textAlign:"center"
+    
+}
+ 
+ 
+ 

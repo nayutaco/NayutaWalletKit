@@ -1,0 +1,11 @@
+"#main" : {
+  top: 0
+}
+"#web" : {
+  backgroundColor: Alloy.Globals.windowColor
+}
+".topBarTop" : {
+  height: Alloy.Globals.btclnTopBarHeight,
+  width: "100%",
+  backgroundColor:Alloy.Globals.mainColor
+}

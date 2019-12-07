@@ -1,0 +1,187 @@
+"#win" : {
+	"orientationModes": [Ti.UI.PORTRAIT],
+	"navBarHidden": true,
+	"backgroundColor": "transparent", 
+}
+"#win[platform=android]" : {
+	"windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+ 
+".title":{
+	color:Alloy.Globals.nayutaDark,
+}
+
+"#pattern":{
+	top:0,
+	width:"100%", 
+}  
+
+ 
+  
+".unlink[if=Alloy.Globals.isiPhoneX]": {
+  top: Alloy.Globals.headerTopIphoneX,
+  right: Alloy.Globals.headerLeft,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.mediumFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+".unlink": { 
+  top: Alloy.Globals.headerTop,
+  right: Alloy.Globals.headerLeft,
+  color: Alloy.Globals.themeColor,
+  font: Alloy.Globals.mediumFont,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+".mainView":{
+    backgroundColor:"white"
+}
+".icon" : {
+	width: 70
+}
+".icon[if=Alloy.Globals.isSmallScreen]" : {
+	width: 70
+}
+".icon[platform=android]" : {
+	width: 70
+}
+".groupings" : {
+	top: 30,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	layout: 'vertical'
+}
+ 
+".icon[if=Alloy.Globals.isiPhoneX]" : {
+	top: 90
+}
+ 
+".aButton" : {
+	width: "90%",
+	height: 50, 
+	color: "white",
+	font: {
+		fontFamily: "Helvetica Neue",
+		fontSize: 20,
+		fontWeight: "normal"
+	}
+}
+".buttonStyle" : {
+	width: "90%",
+	height: 50,
+	backgroundColor: Alloy.Globals.nayutaDark,
+	borderColor: Alloy.Globals.nayutaDark,
+	borderWidth: 1,
+	borderRadius: 25
+}
+
+"#backUpButtons":{
+    bottom:40,
+	visible:false,
+}
+
+"#backUpButtons[if=Alloy.Globals.isiPhoneX]":{
+    bottom:60,
+}
+
+
+"#restoreButtons":{
+    bottom:40,
+	visible:false,
+}
+
+
+
+"#restoreButtons[if=Alloy.Globals.isiPhoneX]":{
+    bottom:60,
+}
+
+"#linkButtons":{
+    bottom:40,
+	visible:false,
+}
+
+
+"#linkButtons[if=Alloy.Globals.isiPhoneX]":{
+    bottom:60,
+}
+
+
+"#backUpGoogleDrive":{
+    text:L("link_google"),
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#linkGoogleButton":{
+    text:L("link_google"),
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#backUpEmail":{
+top:15,
+   text:L("back_up_email"),
+   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#restoreButton":{
+    text:L("restore_channel_funds"),
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#skipButton":{
+    top:15,
+    text:L("skip"),
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#laterButton":{
+    top:15,
+   text:L("later_button"),
+   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#backUpGoogleDriveSpinner":{
+    height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+	indicatorColor: Alloy.Globals.nayutaDark,
+}
+
+"#linkGoogleDriveSpinner":{
+    height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+	indicatorColor: Alloy.Globals.nayutaDark,
+}
+
+"#restoreSpinner":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+	indicatorColor: Alloy.Globals.nayutaDark,
+}
+
+"#backUpGoogleDriveOuter":{
+    layout:"vertical",
+      height: Ti.UI.SIZE,
+	width: Ti.UI.FILL,
+}
+"#backUpGoogleDriveInner":{ 
+      height: Ti.UI.SIZE,
+	width: Ti.UI.FILL,
+}
+
+"#lastBackUp":{ 
+    top:5,
+     color:Alloy.Globals.nayutaDark,
+    font: {
+      fontSize: 14
+    }
+}
+"#descriptionLabel":{
+    width:"90%",
+    color:Alloy.Globals.nayutaDark,
+    font: {
+      fontSize: 16
+    }, 
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}

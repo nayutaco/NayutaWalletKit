@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View class="tifill background" id="background" />
+      <View class="mainView" id="mainView">
+      <ImageView id="nayutaIcon" class="nayutaIcon" />     
+      <Label id="walletName" onClick="showNodeInfo" /> 
+      <View platform="android" class="overlay" /> 
+		 
+         <ActivityIndicator id="firstLoader" />
+         <TableView id="table">
+            <FooterView>
+               <View class="addChannel">
+                  <View id="addChannelButtonOuter" onClick="openChannelForm">
+                     <Label class="containedButton" id="addChannelButton">L('label_open_channel')</Label>
+                  </View>
+               </View>
+            </FooterView>
+         </TableView>
+         <Label id="noChannels">L("no_channels")</Label>
+      </View>
+      <View id="nodeInfo">
+			<Require src="node_info" />
+		</View>
+      <View class="syncViewBlock" id="syncView"><Label class="syncViewBlockDescription">L("please_wait_for_sync")</Label></View>
+   </Window>
+</Alloy>

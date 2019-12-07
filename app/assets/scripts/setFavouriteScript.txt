@@ -1,0 +1,17 @@
+function getFavIcon() {
+    var favicon = undefined;
+    var nodeList = document.getElementsByTagName('link');
+    for (var i = 0; i < nodeList.length; i++) {
+        if ((nodeList[i].getAttribute('rel') == 'icon') || (nodeList[i].getAttribute('rel') == 'shortcut icon')) {
+            favicon = nodeList[i].getAttribute('href');
+            
+           	 favicon = favicon.replace('\\','/');
+            
+        }
+    }
+    return JSON.stringify({
+        'icon': favicon,
+        'title': document.title
+    });
+}
+getFavIcon();

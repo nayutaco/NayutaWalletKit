@@ -1,0 +1,72 @@
+"#mainView" : {
+  backgroundColor: 'white',
+  top: 0,
+  left: 0,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL
+}
+".background":{
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  opacity: 0.8,
+  image: "/images/pebbleBackground.jpg",
+}
+"#detailsView" : {
+  layout: 'vertical',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+"#orbotLogo":{
+   height:200,
+   image: "/images/orbotLogo.png",
+}
+"#backButton" : {
+  top: 45,
+  height:40,
+  width: 150,
+  text:L("label_close"),
+  borderRadius: 20,
+	borderWidth: 1,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	borderColor: Alloy.Globals.nayutaDark,
+  color: Alloy.Globals.nayutaDark,
+  font: {
+    fontFamily: Alloy.Globals.normalFont,
+    fontSize: 18
+  }
+}
+"#downloadButton" : {
+  top: 25,
+  height:40,
+  width: 150,
+  text:L("orbot_download"),
+  borderRadius: 20,
+	borderWidth: 1,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	borderColor: Alloy.Globals.nayutaDark,
+  color: Alloy.Globals.nayutaDark,
+  font: {
+    fontFamily: Alloy.Globals.normalFont,
+    fontSize: 18
+  }
+}
+"#guide_title" : {
+  top: 15,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.normalFont,
+  },
+  width:"80%",
+  color: Alloy.Globals.nayutaDark,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#guide_text" : {
+  top: 20,
+  font: {
+    fontFamily: Alloy.Globals.normalFont,
+    fontSize: 18
+  },
+  width:"80%",
+  color: Alloy.Globals.nayutaDark,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, 
+}

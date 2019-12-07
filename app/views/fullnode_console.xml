@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win">
+      <View class="tifill background" id="background">
+          
+<TextArea class="console" id="console">
+                    
+    </TextArea>
+    <TextField class="command" id="command">
+                    
+    </TextField>
+
+    <View class="buttons">
+    <Label class="aButton" onClick="close">cancel</Label>
+    <Label class="aButton" onClick="run">run</Label>
+    </View>
+    
+    </View>
+   </Window>
+</Alloy>

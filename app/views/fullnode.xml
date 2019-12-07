@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win" onPostlayout="didLoad">
+      <View class="tifill background" id="background">
+         <View class="backgroundInner" id="backgroundInner" />
+         <View class="innerView">
+            
+            
+            <View class="loadingSection">
+               <Widget src="de.manumaticx.circularprogress" id="progress" />
+               <Widget src="de.manumaticx.circularprogress" id="progressGreen" />
+               <View id="centerControls">
+                  <View id="centerButton" onClick="startDownload">
+                     <Label id="valueLabel" />
+                     <Label id="percentageLabel" />
+                  </View>
+                  <Label id="statusLabel" />
+                  <Label id="stopButton" onClick="stopCore">L("label_stop")</Label>
+               </View>
+            </View>
+           
+           
+            <View class="options">
+
+            <Label class="titleOptions">L("sync_mode_description")</Label>
+            <View class="optionButtons">
+
+
+            <Button class="titleButton" id="always" onClick="setAlways"/>
+
+            <Button class="titleButton" id="lite" onClick="setLite"/>
+
+             <Button class="titleButton" id="never" onClick="setNever"/>
+
+               </View>
+             <Label class="titleOptions">L("wallet_mode_description")</Label>
+
+ <View class="optionButtons">
+            <Button class="titleButton" id="neutrino"  onClick="setNeutrino"/>
+
+            <Button class="titleButton" id="bitcoind"  onClick="setBitcoinD"/>
+                </View>
+               
+            </View>
+            
+            </View>
+
+            <Label id="backButton" onClick="close">L("label_close")</Label>
+           
+            
+             <Label id="settings" onClick="goToSettings">L("label_settings")</Label>
+
+             <Label id="testnet">testnet</Label>
+            
+            <View class="backgroundInner" id="page1">
+               <Label class="title" id="title1">L("node_title")</Label>
+               <Label class="description">L("node_desc")</Label>
+               <ImageView id="fullNode" />
+               <Label class="nextButton" onClick="goToPage2" />
+            </View>
+            <View class="backgroundInner" id="page2" visible="false">
+               <Label class="title" id="title2">L("hybrid_title")</Label>
+               <Label class="description">L("hybrid_title_desc")</Label>
+               <ImageView id="bitcoin" />
+               <Label class="nextButton" onClick="goToPage3" />
+            </View>
+             <View class="backgroundInner" id="page3" visible="false">
+               <Label class="title" id="title3">L("full_node_beta")</Label>
+               <Label class="description">L("full_node_beta_desc")</Label>
+               <ImageView id="bitcoinBeta" />
+               <Label class="nextButton" onClick="closeIntro" />
+            </View>
+
+       
+      </View>
+   </Window>
+</Alloy>

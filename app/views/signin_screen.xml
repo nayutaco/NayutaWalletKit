@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+   <Window id="win" onPostlayout="didLoad">
+      <View id="mainView" class="mainView">
+			<View platform="android" class="overlay" /> 
+		 
+         <ScrollableView id="scrollView">
+            <View id="page1"> 
+                <View class="buttonsOptions">  
+                    <Label id="description">L('signin_passphrase_description')</Label> 
+                    <Widget src="co.nayuta.button" id="recoverSeed"  class="aButtonOption nextButton" text="L('recover_from_seed')"/> 
+                    <Widget src="co.nayuta.button" id="linkNode"  class="aButtonOption nextButton" text="L('link_to_node')"/> 
+                </View>
+                
+               <Label class="backButton" id="firstButtonBack" onClick="firstButtonBackClose">L("label_goback")</Label>
+
+            </View>
+
+            <View id="page2">
+               <ScrollView class="pageInnerScroll">
+                  <Label class="pageNo">1/3</Label>
+                  <View class="pageInner">
+                     <View class="row">
+                        <View class="column">
+                           <TextField class="word wordTop" id="word1" onChange="checkWord"/>
+                           <TextField class="word" id="word3" onChange="checkWord"/>
+                           <TextField class="word" id="word5" onChange="checkWord"/>
+                           <TextField class="word" id="word7" onChange="checkWord"/>
+                        </View>
+                        <View class="column rightCol">
+                           <TextField class="word  wordTop" id="word2" onChange="checkWord"/>
+                           <TextField class="word" id="word4" onChange="checkWord"/>
+                           <TextField class="word" id="word6" onChange="checkWord"/>
+                           <TextField class="word" id="word8" onChange="checkWord"/>
+                        </View>
+                     </View>
+                  </View>
+                  <Label id="skip" onClick="skip">skip (dev)</Label>
+                  <View class="buttons">   
+                     <Widget src="co.nayuta.button" class="aButton" id="firstPageBack" text="L('back')"/>  
+                     <Widget src="co.nayuta.button" class="aButton rightButton nextButton" id="firstPageNext" text="L('next')"/>  
+                  </View>
+               </ScrollView>
+            </View>
+            <View id="page3">
+               <ScrollView class="pageInnerScroll">
+                  <Label class="pageNo">2/3</Label>
+                  <View class="pageInner">
+                     <View class="row">
+                        <View class="column">
+                           <TextField class="word  wordTop" id="word9" onChange="checkWord"/>
+                           <TextField class="word" id="word11" onChange="checkWord"/>
+                           <TextField class="word" id="word13" onChange="checkWord"/>
+                           <TextField class="word" id="word15" onChange="checkWord"/>
+                        </View>
+                        <View class="column rightCol">
+                           <TextField class="word  wordTop" id="word10" onChange="checkWord"/>
+                           <TextField class="word" id="word12" onChange="checkWord"/>
+                           <TextField class="word" id="word14" onChange="checkWord"/>
+                           <TextField class="word" id="word16" onChange="checkWord"/>
+                        </View>
+                     </View>
+                  </View>
+                  <View class="buttons"> 
+                     <Widget src="co.nayuta.button" class="aButton" id="secondPageBack" text="L('back')"/>  
+                     <Widget src="co.nayuta.button" class="aButton rightButton nextButton" id="secondPageNext" text="L('next')"/>   
+                  </View>
+               </ScrollView>
+            </View>
+            <View id="page4">
+               <ScrollView class="pageInnerScroll">
+                  <Label class="pageNo">3/3</Label>
+                  <View class="pageInner">
+                     <View class="row">
+                        <View class="column">
+                           <TextField class="word  wordTop" id="word17" onChange="checkWord"/>
+                           <TextField class="word" id="word19" onChange="checkWord"/>
+                           <TextField class="word" id="word21" onChange="checkWord"/>
+                           <TextField class="word" id="word23" onChange="checkWord"/>
+                        </View>
+                        <View class="column rightCol">
+                           <TextField class="word  wordTop" id="word18" onChange="checkWord"/>
+                           <TextField class="word" id="word20" onChange="checkWord"/>
+                           <TextField class="word" id="word22" onChange="checkWord"/>
+                           <TextField class="word" id="word24" onChange="checkWord"/>
+                        </View>
+                     </View>
+                  </View>
+                  <View class="buttons">
+                     <Widget src="co.nayuta.button" class="aButton" id="thirdPageBack" text="L('back')"/>  
+                     <Widget src="co.nayuta.button" class="aButton rightButton nextButton" id="thirdPageNext" text="L('next')"/>   
+                  </View>
+               </ScrollView>
+            </View>
+         </ScrollableView>
+      </View>
+   </Window>
+</Alloy>

@@ -1,0 +1,74 @@
+".mainView" : {
+  height: Ti.UI.FILL,
+  width: Ti.UI.FILL,
+  backgroundColor: "#e3e3e3"
+}
+".detailsView" : {
+  height: Ti.UI.SIZE,
+  width: Ti.UI.SIZE
+}
+"#alias" : {
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+".qrcodeImage" : {
+  top: 15,
+  width: 250,
+  height: 250,
+  margin: 15
+}
+"#pubkey" : {
+  top: 10,
+  width:"70%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 10,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+".title" : {
+  left: 5,
+  color: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 20,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+".description" : {
+  left: 5,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 15,
+    fontFamily: 'GillSans-Light',
+    fontWeight: 'light'
+  }
+}
+"#close" : {
+  top: 15,
+  width: 150,
+  height: 40,
+  borderRadius: 20,
+  borderWidth: 1,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.mainColorDarker,
+  borderColor: Alloy.Globals.mainColorDarker
+}
+"#chainTitle" : {
+  top: 10
+}
+"#chain" : {
+  top: 5
+}
+"#hostTitle" : {
+  top: 10
+}
+"#host" : {
+  top: 5
+}

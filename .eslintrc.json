@@ -1,0 +1,24 @@
+{
+    "extends": [
+        "google",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "eqeqeq": "off",
+        "curly": "warn",
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "warn",
+        "no-var": "off",
+        "require-jsdoc": "off",
+        "max-len": "off"
+    }
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="transparent" id="settingsView">
+			<View class="tifill background" id="background" />
+			<View class="tifill mainView" id="mainView" layout="vertical">
+			
+				<ScrollView id="scrollView" class="tifill scrollView" scrollType="vertical" layout="vertical">
+            <Label class="settingsLabel">L('label_settings')</Label>
+				 <View id="firstOption" class="option" onClick="viewPassphrase" id="passphrase">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('passphrase')</Label>
+                     <Label class="optionDescription">L('passphrase_description_settings')</Label>
+                  </View>
+                  <ImageView class="optionButton" image="/images/passphraseIcon.png"/>
+               </View>
+
+
+                <View class="option" onClick="addNode">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('add_node')</Label>
+                     <Label class="optionDescription">L('add_node_description')</Label>
+                  </View>
+                  <ImageView class="optionButton" image="/images/nodeIcon.png"/>
+               </View>
+
+
+               <View class="option" id="testnet">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('set_testnet')</Label>
+                     <Label class="optionDescription">L('set_testnet_description')</Label>
+                  </View>
+                  <Switch class="optionButton" id="testnetSwitch" onChange="setTestnetSwitch"/>
+               </View>
+
+                <View class="option" id="autopilot">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('label_settings_autopilot')</Label>
+                     <Label class="optionDescription">L('label_settings_autopilot_description')</Label>
+                  </View>
+                  <Switch class="optionButton" id="autoPilotSwitch" onChange="setAutoPilot"/>
+               </View>
+
+
+               <View class="option" onClick="exportChannels">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('back_up_google_drive')</Label>
+                     <Label class="optionDescription">L('back_up_google_drive_description')</Label>
+                  </View>
+                  <ImageView class="optionButton" image="/images/cloudIcon.png"/>
+               </View>
+
+                <View class="option" id="feeLimit" >
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('set_fee_limit_title')</Label>
+                     <Label class="optionDescription" id="feeLimitDesc">L('set_fee_limit_desc')</Label>
+                  </View>
+                   <Switch class="optionButton" id="feeLimitSwitch" onChange="setFeeLimit"/>
+               </View>
+
+                <View class="option" id="addWatchTower" onClick="addWatchTower">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('add_watch_tower')</Label>
+                     <Label class="optionDescription">L('add_watch_tower_desc')</Label>
+                  </View>
+                   <ImageView class="optionButton" image="/images/watchTowerIcon.png"/>
+               </View>
+
+
+		      <View class="option" onClick="startBluetooth" platform="android">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('bluetooth')</Label>
+                     <Label class="optionDescription">L('bluetooth_description')</Label>
+                  </View>
+                  <ImageView class="optionButton" image="/images/bluetoothIcon.png"/>
+               </View>
+
+
+                  <View class="option" id="fullnode" onClick="openFullNode" platform="android">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">L('fullnode')</Label>
+                     <Label class="optionDescription">L('fullnode_description')</Label>
+                  </View>
+                  <ImageView class="optionButton" image="/images/full_node_icon.png"/>
+               </View>
+
+
+			   <View class="option" id="signOut" onClick="signOut">
+                  <View class="optionBackground" />
+                  <View class="optionLabels">
+                     <Label class="optionLabel">sign out</Label>
+                     <Label class="optionDescription">dev only</Label>
+                  </View>
+                  <ImageView class="optionButton"  image="/images/signOutIcon.png"/>
+               </View>
+
+  
+					<Label id="version" class="size10 gray description" />
+				</ScrollView>
+			</View>
+				
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,210 @@
+"#win" : {
+	backgroundColor: Alloy.Globals.windowColor,
+	flagSecure : true
+}
+
+"#description":{
+  width:"70%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+
+".line":{
+    height:1,
+    width:"20%",
+    backgroundColor:Alloy.Globals.fontColor1, 
+}
+".column":{ 
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+".rightCol":{
+    left:40
+}
+".row":{   
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+
+".pageBack":{
+  width:"100%",
+  height:"45%",
+  opacity:0.3,
+  backgroundColor:Alloy.Globals.mainColor,
+}
+
+".pageBackTest":{ 
+  height:"40%",
+}
+
+".word":{ 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1, 
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  },
+  left:0,
+  top:40,
+  width:Ti.UI.SIZE,
+  height:30  
+}
+".wordTop":{
+  top:0,
+}
+
+".buttons":{
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+  bottom:50
+}
+
+".aButton":{ 
+  width:120,
+  height:40,
+  borderRadius:20,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+"#loadingSpinner" : {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+  style: Ti.UI.ActivityIndicatorStyle.BIG,
+	indicatorColor: Alloy.Globals.mainColor,
+	visible: false
+}
+
+".pageNo":{  
+  top:70,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  opacity:0.7,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  } 
+} 
+ 
+".pageInner":{  
+}
+ 
+".nextButton":{
+  backgroundColor:Alloy.Globals.nayutaDark,
+  textColor:"white",
+  borderColor:Alloy.Globals.nayutaDark,
+} 
+
+".right":{
+    left:30
+}
+
+".rightButton":{
+    left:40
+}
+
+"#testPage":{
+    width:"100%",
+    height:"100%", 
+}
+
+".testWordField":{ 
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, 
+    hintTextColor:"gray",
+    autocorrect:false,
+  	autocapitalization:Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE,
+    width:150, 
+    backgroundColor:"transparent",
+    hintText:L('enter_hint_text'),
+    top:20,
+    height:50,
+}
+
+".testPageInner":{ 
+    width:Ti.UI.SIZE,
+    height:Ti.UI.FILL,  
+}
+
+".testRow":{
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE, 
+}
+
+ ".testCol":{
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE, 
+}
+
+
+".testWord":{ 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1, 
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }, 
+  width:Ti.UI.SIZE,
+  height:50,
+  top:20  
+}
+
+".middleCol":{
+    left:20,
+    right:20
+}
+
+"#scrollView":{
+    scrollingEnabled:false
+}
+
+
+"#testDescription":{
+  top:70,
+  width:"70%",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.Globals.fontColor1,
+  font: {
+    fontSize: 20,
+    fontFamily: Alloy.Globals.lightFont,
+    fontWeight: 'light'
+  }
+}
+
+".aButtonBack":{
+    bottom:50
+}
+
+".testWordOuter":{
+    layout:"vertical",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+}
+
+".line":{
+    height:1,
+    width:150,
+    backgroundColor: Alloy.Globals.fontColor1,
+}
+
+"#skip":{
+  bottom:120
+}

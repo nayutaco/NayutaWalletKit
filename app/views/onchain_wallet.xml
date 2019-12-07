@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win">
+		<View class="tifill background" id="background" />
+		<View class="mainView" id="mainView">
+		<ImageView id="nayutaIcon" class="nayutaIcon" /> 
+		<View platform="android" class="overlay" /> 
+			<TableView class="paymentList" id="paymentList">
+				<HeaderView class="header">
+					<View class="topBarTop">
+						<View class="info" id="info">
+							<View class="infoInner" onClick="getWalletBalance">
+								<Label class="balanceTitle" id="onchain_description">L("onchain_description")</Label>
+								<Label class="cryptoValue" id="totalBalance" />
+								<Label class="fiatValue" id="totalBalanceFiat" />
+								<View class="options">
+									<Label class="receiveButton" onClick="showReceive">L('receive')</Label>
+									<Label class="payButton" onClick="showPay">L('pay')</Label>
+								</View>
+							</View>
+							<ActivityIndicator id="onChainBalanceSpinner" visible="false" />
+						</View>
+						<View class="seperator1" />
+						<Label id="noTransactions">L("no_transactions")</Label>
+						<ActivityIndicator id="listTopSpinner" visible="false" />
+					</View>
+				</HeaderView>
+			</TableView>
+			<View class="syncViewBlock" id="syncView"><Label class="syncViewBlockDescription">L("please_wait_for_sync")</Label></View>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window id="win" onClose="onClose">
+		<View class="transparent">
+			<View class="background" id="background" />
+			<View class="tifill mainView" id="mainView">
+				<View platform="android" class="overlay" /> 
+			 
+				<View class="outer transparent">
+					<View class="amounts transparent">
+						<View class="tisize transparent" layout="vertical">
+							<View class="tisize transparent" layout="vertical">
+								<View class="tisize amountView" id="amountView" layout="horizontal">
+									<TextField class="amount" id="amount" onFocus="selectedCrypto" onChange="updateValues">
+										<KeyboardToolbar platform="ios">
+											<Toolbar>
+												<Items>
+													<Button title="Done" onClick="hideKeyboard" />
+												</Items>
+											</Toolbar>
+										</KeyboardToolbar>
+									</TextField>
+									<Label class="amountBTC" id="amountBTC" />
+								</View>
+								<View class="tisize fiatView" id="fiatView" layout="horizontal">
+									<Label class="fiatSymbol" id="fiatSymbol" />
+									<TextField class="fiat" id="fiat" onFocus="selectedFiat" onChange="updateValues">
+										<KeyboardToolbar platform="ios">
+											<Toolbar>
+												<Items>
+													<Button title="Done" onClick="hideKeyboard" />
+												</Items>
+											</Toolbar>
+										</KeyboardToolbar>
+									</TextField>
+								</View>
+							</View>
+						</View>
+					</View>
+					<TextField class="memo" id="memo" />
+					<View class="seperator1" />
+					<View class="expiryOuter">
+						<Label id="expiryDescription">L('expiry_description')</Label>
+						<View id="expiryControls">
+							<Label class="plusminus" onTouchstart="minusExpiry">-</Label>
+							<Label id="time" />
+							<Label class="plusminus" onTouchstart="addExpiry">+</Label>
+						</View>
+					</View>
+					<View class="seperator1" />
+					<ActivityIndicator id="requestSpinner" />
+					<Button id="generateLabel" class="containedButton" onClick="pressedRequest" />
+				</View>
+				<Label class="backButton size15 black pull-left pull-bottom" id="gobackButton" onClick="close">L("label_goback")</Label>
+
+			</View>
+			<View id="blockingView" />
+			<View id="qrcode">
+				<View class="qrCodeBackground" />
+				<View class="qrCodeOuter">
+					<View id="qrCodeInner" onClick="copyClipboard" />
+					<View class="statusView">
+						<ActivityIndicator id="statusSpinner" />
+						<Label id="statusText" />
+					</View>
+				</View>
+				<Label class="size15 white pull-left pull-bottom" id="closeButton" onClick="closeQR">L("label_close")</Label>
+				<Label id="checkPayment" onClick="checkPayment">L("check_payment")</Label>
+			</View>
+		</View>
+	</Window>
+</Alloy>

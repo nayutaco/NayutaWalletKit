@@ -1,0 +1,59 @@
+".background": {
+	backgroundColor: "#000000",
+	opacity: 0
+}
+
+".mainView": {
+	width: "100%",
+	height:Ti.UI.FILL,
+	left: Alloy.Globals.display.width,
+	backgroundColor: "#ffffff",
+}
+
+ ".topbar":{
+ 	top:0,
+ 	height:Alloy.Globals.topBarHeight
+ }
+".addToken": { 
+	right:5,
+	top:13,  
+	width:Ti.UI.SIZE,
+	height: '100%', 
+}
+
+".addToken[platform=android]": { 
+	right:5,
+	top:0,  
+	width:Ti.UI.SIZE,
+	height: '100%', 
+}
+".addTokenIcon": { 
+	right:0,
+	width: 25,
+	height: 25, 
+}
+
+".addTokenLabel": {
+	right:30,
+	textAlign:'right',
+	color:'white',
+}
+ 
+".tokenList": {
+	top: 60,
+	width: Ti.UI.FILL,
+	height: 0,
+	backgroundColor: "#ffffff",
+	separatorStyle:Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE
+}
+".tokenList[platform=ios]": {
+	selectionStyle: Titanium.UI.iOS.TableViewCellSelectionStyle.NONE
+}
+".tokenList[platform=android]": {
+	selectionStyle:'none'
+}
+
+"#loadingLabel":{
+	left:5,
+}
+

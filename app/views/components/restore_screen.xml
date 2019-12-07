@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<Window class="transparent" id="win">
+		<View class="tifill mainView">
+			<ImageView id="pattern" image="/images/pattern.png" />
+			<View platform="android" class="overlay" /> 
+			 
+          
+			<View class="groupings">
+				<ImageView class="icon" id="backupIcon" image="/images/icon_restore.png" />
+				<Label class="size18 white bold title" id="title">L("restoring_title")</Label>
+			</View>
+			<View class="tisize" layout="vertical">
+				<Label id="descriptionLabel">L("channel_restore_description")</Label>
+			</View>
+			<Button class="buttonStyle aButton" id="restoreButton" onClick="continueFunc" />
+		</View>
+	</Window>
+</Alloy>

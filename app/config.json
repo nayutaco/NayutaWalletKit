@@ -1,0 +1,25 @@
+{
+  "global": {},
+  "apiURLTestnet": "https://shop.nayuta.co/wallet/api/v1/",
+  "apiURLMainnet": "https://wallet.nayuta.co/wallet/api/v1/",
+  "env:development": {
+    "isDevelopment": true
+  },
+  "env:test": {
+    "isDevelopment": true
+  },
+  "env:production": {
+    "isDevelopment": false
+  },
+  "os:android": {
+    "scheme_url": "Ti.Android.currentActivity.intent.data"
+  },
+  "os:blackberry": {},
+  "os:ios": {},
+  "os:mobileweb": {},
+  "os:windows": {},
+  "dependencies": {
+    "de.manumaticx.circularprogress": "*",
+    "co.nayuta.button": "*"
+  }
+}

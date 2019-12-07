@@ -1,0 +1,189 @@
+".background2" : {
+	backgroundColor: "black",
+	opacity: 0,
+	top: 0,
+	left: 0,
+	width: 1000,
+	height: 1000
+}
+"#mainInfo" : {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+"#loadingSpinner" : {
+	color: Alloy.Globals.mainColor,
+	indicatorColor: Alloy.Globals.mainColor,
+	style: Ti.UI.ActivityIndicatorStyle.BIG_DARK
+}
+"#loadingSpinner[platform=ios]" : {
+	style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+".loadingFont" : {
+	textAlign: "center"
+}
+"#loading" : {
+	visible: false,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+"#paid" : {
+	visible: false,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+".paidImg" : {
+	image: "/images/checkSymbol.png",
+	height: 150
+}
+"#notpaid" : {
+	visible: false,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+".notPaidImg" : {
+	image: "/images/dameSymbol.png",
+	height: 150
+}
+"#main" : {
+	height: '100%',
+	width: '100%'
+}
+".confBox" : {
+	backgroundColor: "transparent", 
+	bottom: 0,
+	width: "100%",
+	height: 360
+}
+".textFieldView" : {
+	top: 7,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+
+
+".topLine" : {
+	backgroundColor: "black", 
+	top: 0,
+	width: "100%",
+	height: 1
+}
+
+".info" : {
+	height: Ti.UI.SIZE
+}
+".lab" : {}
+".labSmall" : {
+	left: 10
+}
+".buttons" : {
+	left: 10,
+	width: 100,
+	height: 40,
+	borderRadius: 20
+}
+"#confirmButton" : {
+	borderColor: Alloy.Globals.confirmColor,
+	color: Alloy.Globals.confirmColor,
+	backgroundImage: "/images/image_blank.png"
+}
+"#cancelButton" : {
+	borderColor: Alloy.Globals.cancelColor,
+	color: Alloy.Globals.cancelColor,
+	backgroundImage: "/images/image_blank.png"
+}
+"#cancelButtonSmall" : {
+	bottom: 10,
+	color: 'gray',
+	backgroundImage: "/images/image_blank.png",
+	title: L('label_close'),
+	visible: false
+}
+".buttonsView" : {
+	top: 20,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+"#message" : {
+	textAlign: "center",
+	width: "90%",
+	height: Ti.UI.SIZE,
+	top: 0,
+	font: {
+		fontSize: 15
+	}
+}
+".font" : {
+	font: {
+		fontFamily: "HelveticaNeue-Light",
+		fontWeight: "normal"
+	}
+}
+"#feeText" : {
+	top: 10,
+	font: {
+		fontSize: 12,
+		fontFamily: "HelveticaNeue-Light",
+		fontWeight: "normal",
+		color: "gray,"
+	}
+}
+"#channelAmount" : {
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+	hintTextColor: "gray",
+	hintText: L("label_enter_funding_hint")
+}
+"#paymentRequest" : {
+	hintTextColor: "gray",
+	width: "70%",
+	hintText: L("enter_payment_request")
+}
+"#configField" : {
+	hintTextColor: "gray",
+	hintText: L("enter_config_url")
+}
+
+"#paymentAmount" : {
+	hintTextColor: "gray",
+	hintText: L("enter_payment_amount_sat"),
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+}
+"#paymentAmountFiat" : {
+	top:5,
+	hintTextColor: "gray",
+	hintText: L("enter_payment_amount_fiat"),
+	keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+}
+"#customPayment":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	layout: 'vertical'
+}
+
+
+"#feeOuter":{
+	layout:"horizontal",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+}
+
+"#feeLabel":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+	font: {
+		fontSize: 12
+	}
+}
+
+"#changeFeeButton":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+	title:"change",
+	backgroundColor:"transparent",
+	color:"#7893d2"
+}
+
+"#onChainPayment":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE, 
+}
+					

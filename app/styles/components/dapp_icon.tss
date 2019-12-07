@@ -1,0 +1,35 @@
+
+".iconOuter":{
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+  left:0,
+  backgroundColor: "transparent",
+	width:150,
+}
+".iconImage":{
+	defaultImage: "/images/image_blank.png",
+	width:40,
+  height:40,
+  left:0
+}
+".mainView":{
+  width: Ti.UI.SIZE,
+  height: 50,
+  left:0
+}
+".iconLabel":{
+  left:10,
+  width:100,
+	color:"#95a4ad",
+	font:{
+		fontSize:10,
+	}
+}
+
+".deleteImage":{
+  left:30,
+  defaultImage: "/images/image_blank.png",
+  top:0,
+  width: 20,
+  visible: false
+}

@@ -1,0 +1,37 @@
+"#win" : {
+  "orientationModes": [Ti.UI.PORTRAIT],
+  "navBarHidden": true,
+  "backgroundColor": "transparent"
+}
+"#win[platform=android]" : {
+  "windowSoftInputMode": Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+}
+"#topbar" : {
+  height: Alloy.Globals.topBarHeight,
+  top: 0
+}
+".mainView" : {
+  width: "100%",
+  left: Alloy.Globals.display.width
+}
+".mainView[platform=android]" : {
+  width: "100%",
+  left: 0
+}
+".background" : {
+  backgroundColor: "#000000",
+  opacity: 0
+}
+"#logs_text" : {
+  top: 0,
+  maxLines: 10000000,
+  height: Ti.UI.SIZE,
+  width: Ti.UI.FILL,
+  font: {
+    fontSize: 9
+  }
+}
+".scrollView" : {
+  backgroundColor: 'white',
+  width: Ti.UI.FILL
+}

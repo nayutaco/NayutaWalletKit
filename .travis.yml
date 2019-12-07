@@ -1,0 +1,147 @@
+jobs:
+  include:   
+    - stage: android 
+      sudo: true
+      os: linux
+      dist: bionic
+      addons:
+        apt:
+          packages:
+            - bridge-utils
+            - libpulse0
+            - libvirt-bin
+            - qemu-kvm
+            - virtinst
+            - ubuntu-vm-builder
+      language: generic
+      cache: npm
+      env:
+        - ENVIRONMENT=travis
+        - ABI=x86_64
+        - ADB_INSTALL_TIMEOUT=8
+        - ANDROID_HOME=${HOME}/android-sdk
+        - ANDROID_TOOLS_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+        - EMU_FLAVOR=default # use google_apis flavor if no default flavor emulator
+        - GRAVIS="https://raw.githubusercontent.com/DanySK/Gravis-CI/master/"
+        - JDK="1.8"
+        - API=28
+        - TOOLS=${ANDROID_HOME}/tools 
+          # PATH order is incredibly important. e.g. the 'emulator' script exists in more than one place!
+        - PATH=${ANDROID_HOME}:${ANDROID_HOME}/emulator:${TOOLS}:${TOOLS}/bin:${ANDROID_HOME}/platform-tools:${PATH}
+        - NODE_VERSION="8.16.0" 
+        - PLATFORM="android"
+      before_install:
+        - openssl aes-256-cbc -K $encrypted_979228d9d50c_key -iv $encrypted_979228d9d50c_iv -in tiapp.xml.enc -out tiapp.xml -d
+        # Set up KVM
+        - sudo adduser $USER libvirt
+        - sudo adduser $USER kvm
+
+        # Set up JDK 8 for Android SDK
+        - echo $GRAVIS
+        - curl "${GRAVIS}.install-jdk-travis.sh" --output ~/.install-jdk-travis.sh
+        - export TARGET_JDK="${JDK}"
+        - JDK="1.8"
+        - source ~/.install-jdk-travis.sh
+
+        # Set up Android SDK
+        - wget -q "${ANDROID_TOOLS_URL}" -O android-sdk-tools.zip
+        - unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}
+        - rm android-sdk-tools.zip
+  
+        # Avoid harmless sdkmanager warning  
+        - mkdir ~/.android
+        - echo 'count=0' > ~/.android/repositories.cfg
+
+        # Accept all Android license agreements
+        - yes | sdkmanager --licenses
+
+        # Download SDK tools
+        - echo y | sdkmanager "platform-tools" >/dev/null
+        - echo y | sdkmanager "tools" >/dev/null # A second time per Travis docs, gets latest versions
+        - echo y | sdkmanager "build-tools;28.0.3" >/dev/null # Implicit gradle dependency - gradle drives changes
+        - echo y | sdkmanager "platforms;android-$API" >/dev/null # We need the API of the emulator we will run
+        - echo y | sdkmanager "platforms;android-28" >/dev/null # We need the API of the current compileSdkVersion from gradle.properties
+        - echo y | sdkmanager "emulator" >/dev/null
+        - echo y | sdkmanager "extras;android;m2repository" >/dev/null
+        - echo y | sdkmanager "system-images;android-$API;$EMU_FLAVOR;$ABI" >/dev/null # install our emulator
+        - echo no | avdmanager create avd --force -n test -k "system-images;android-$API;$EMU_FLAVOR;$ABI" -c 2500M
+        - sdkmanager --update
+        - |
+          EMU_PARAMS="-no-window -gpu off -partition-size 7000 -no-boot-anim -verbose -no-snapshot -camera-back none -camera-front none -selinux permissive -qemu -m 4096"
+          EMU_COMMAND="emulator"
+          # This double "sudo" monstrosity is used to have Travis execute the
+          # emulator with its new group permissions and help preserve the rule
+          # of least privilege.
+          sudo -E sudo -u $USER -E bash -c "${ANDROID_HOME}/emulator/${EMU_COMMAND} -avd test ${AUDIO} ${EMU_PARAMS} &"
+        # Wait for emulator to be ready
+        - ./tools/wait_for_emulator.sh
+        - adb shell input keyevent 82 &
+
+        # Switch back to our target JDK version to build and run tests
+        - JDK="${TARGET_JDK}"
+        - source ~/.install-jdk-travis.sh
+        - emulator -list-avds 
+        # - echo no | avdmanager create avd --force -n test -k "system-images;android-26;sys-img-x86_64-google_apis-25"
+        - nvm install $NODE_VERSION
+        - npm install -g appium mocha
+        - npm install wd
+        - appium --log-level info &
+ 
+        
+      install: 
+        - npm install -g appcelerator titanium alloy
+        - ti sdk install 8.1.0.GA --no-progress-bars
+        - java -version
+        - echo $JAVA_HOME  
+        - echo $ANDROID_SDK 
+        - echo $ANDROID_HOME  
+        - ti build -p android --log-level info --build-only
+
+      before_script:
+        # - gulp 'start:emulator'
+        # - gulp 'config:tiapp' --test
+
+      script: 
+        - mocha tests.js
+
+    - stage: ios
+      language: objective-c  
+      os: osx
+      osx_image: xcode11.2 
+      cache:
+        directories:
+        - $HOME/.m2
+      env: 
+        - NODE_VERSION="8.16.0" PLATFORM="ios" ENVIRONMENT=travis
+      before_install:
+        - openssl aes-256-cbc -K $encrypted_979228d9d50c_key -iv $encrypted_979228d9d50c_iv -in tiapp.xml.enc -out tiapp.xml -d
+        - nvm install $NODE_VERSION 
+        - export GOPATH=/Users/travis/go
+        - export PATH=$GOPATH/bin:$PATH 
+        - open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app 
+
+      install: 
+        - npm install -g appium
+        - npm install -g mocha
+        - npm install wd 
+        - appium --log-level info &
+        - go get -u golang.org/x/tools/...
+        - go get -u -v github.com/halseth/falafel
+        - go get golang.org/x/mobile/cmd/gomobile
+        - gomobile init
+        - npm install -g appcelerator titanium alloy
+        - ti sdk install latest --no-progress-bars
+        - ti sdk install 8.1.0.GA --no-progress-bars  
+        - ./CreateFrameworks
+        - ti clean
+        - ti build -p ios --log-level info --build-only
+        - echo "build succeded"
+
+      before_script: 
+
+      script:
+        - mocha tests.js
+
+notifications:
+  email:
+    - chris@nayuta.io

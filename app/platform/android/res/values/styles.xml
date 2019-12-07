@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NayutaTheme" parent="@style/Theme.AppCompat.NoActionBar">
+    	<item name="android:textColorHint">#ccc</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style> 
+</resources>

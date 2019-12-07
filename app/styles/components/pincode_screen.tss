@@ -1,0 +1,133 @@
+"#win" : {
+  orientationModes: [Ti.UI.PORTRAIT],
+  navBarHidden: true,
+  backgroundColor: "transparent",
+  width: Ti.UI.FILL,
+  height: Alloy.Globals.display.height
+}
+"#win[platform=android]" : {
+  windowSoftInputMode: Ti.UI.Android.SOFT_INPUT_STATE_ALWAYS_HIDDEN,
+  height: Ti.UI.FILL
+}
+"#main" : {
+  width: Ti.UI.FILL,
+  height: Alloy.Globals.display.height,
+  top: Alloy.Globals.display.height
+}
+"#main[platform=android]" : {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  top: Alloy.Globals.display.height
+}
+".back" : {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  top: 0,
+  backgroundColor: "#ffffff",
+  opacity: 0.95
+}
+".comp_marks" : {
+  image: "/images/image_easyinput_none.png",
+  width: 18
+}
+"#m1" : {
+  left: 0
+}
+"#m2" : {
+  left: 30
+}
+"#m3" : {
+  left: 60
+}
+"#m4" : {
+  left: 90
+}
+"#m5" : {
+  left: 120
+}
+"#m6" : {
+  left: 150
+}
+
+".logo" : {
+  image: "/images/icon_logo.png",
+  width: 70,
+  top: 0
+}
+".group" : {
+  layout: "vertical",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+".marks" : {
+  top: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+"#instructionLabel" : {
+  color: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 20,
+  },
+  top: 10,
+  color: Alloy.Globals.mainColor,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, 
+}
+".aButton" : {
+  borderColor: Alloy.Globals.mainColor,
+  borderWidth: 1.5,
+  borderRadius:45,
+  backgroundImage: "/images/image_blank.png",
+  width: 90,
+  height: 90,
+  left: 10,
+  title: "wewew",
+  titleColor: Alloy.Globals.mainColor,
+  font: {
+    fontSize: 30
+  },
+  color: Alloy.Globals.mainColor
+}
+".buttonRow" : {
+  layout: "horizontal",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  top: 10
+}
+".buttons" : {
+  layout: "vertical",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  top:15
+}
+"#c" : {
+  borderWidth: 0,
+  font: {
+    fontSize: 18
+  },
+  width: 70
+}
+"#e" : {
+  borderWidth: 0,
+  font: {
+    fontSize: 18
+  },
+  width: 70,
+  backgroundImage: "/images/image_blank.png"
+}
+
+"#c[platform=android]" : {
+  borderWidth: 0,
+  font: {
+    fontSize: 12
+  },
+  width: 70
+}
+"#e[platform=android]" : {
+  borderWidth: 0,
+  font: {
+    fontSize: 12
+  },
+  width: 60,
+  backgroundImage: "/images/image_blank.png"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alloy>
+	<View class="mainView">
+		<View class="iconOuter" onLongpress="showDelete" onClick="openDapp">
+			<ImageView class="iconImage" id="iconImage" image="/images/booIcon.png" />
+			<Label class="iconLabel" id="iconLabel" />
+		</View>
+		<ImageView class="deleteImage" id="deleteImage" image="/images/deleteIcon.png" onClick="deleteDapp" onError="errorLoad" />
+	</View>
+</Alloy>

@@ -1,0 +1,295 @@
+"#win" : {
+	backgroundColor: Alloy.Globals.windowColor,
+	navBarHidden:true, 
+	orientationModes: [
+		Ti.UI.PORTRAIT,
+		Ti.UI.UPSIDE_PORTRAIT
+	]
+}
+
+"TabGroup[platform=android]": {
+	style: Titanium.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION,
+	shiftMode: false,
+}
+
+"TabGroup": {
+	tabsBackgroundColor: "#9FA6AA",
+}
+
+"#lightning": {
+	title: "lightning",
+	titleColor: "white",
+	activeTitleColor: "black",
+	icon: "/images/icon_lightning.png", 
+}
+
+"#lightning[platform=ios]": {
+	icon: "/images/tabbaricons/icon_lightning.png",
+	activeIcon: "/images/tabbaricons/icon_lightningActive.png", 
+	activeIconIsMask: false,
+	iconIsMask: false,
+}
+
+"#onChain": {
+	title: "onchain",
+	titleColor: "white",
+	activeTitleColor: "black",
+	icon: "/images/icon_chain.png", 
+}
+
+"#onChain[platform=ios]": {
+	icon: "/images/tabbaricons/icon_chain.png",
+	activeIcon: "/images/tabbaricons/icon_chainActive.png", 
+	activeIconIsMask: false,
+	iconIsMask: false,
+}
+
+"#channels": {
+	title: "channels",
+	titleColor: "white",
+	activeTitleColor: "black",
+	icon: "/images/networkSymbol.png", 
+}
+
+"#channels[platform=ios]": {
+	icon: "/images/tabbaricons/networkSymbol.png",
+	activeIcon: "/images/tabbaricons/networkSymbolActive.png", 
+	activeIconIsMask: false,
+	iconIsMask: false,
+}
+
+"#settings": {
+	title: "settings",
+	titleColor: "white",
+	activeTitleColor: "black",
+	icon: "/images/settingsIcon.png", 
+}
+
+"#settings[platform=ios]": {
+	icon: "/images/tabbaricons/settingsIcon.png",
+	activeIcon: "/images/tabbaricons/settingsIconActive.png", 
+	activeIconIsMask: false,
+	iconIsMask: false,
+}
+
+"#progress" : { 
+    width:Alloy.Globals.display.width90,
+    height:Alloy.Globals.display.width90,
+	margin:4,
+	backgroundColor:'white',
+	progressColor:Alloy.Globals.nayutaDark,
+	progressBackgroundColor:Alloy.Globals.mainColor, 
+	progressWidth: 25,
+	showText: false,
+	color: '#33b5e5', 
+	visible:false, 
+}
+ 
+"#syncStatus" : {  
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	layout:"vertical", 
+	visible: false, 
+	
+}
+"#syncPercentage" : { 
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontWeight: "light",
+		fontSize: 90
+	}
+}
+ 
+"#syncText" : {  
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 14
+	}
+}
+
+ 
+"#syncTextDescription" : {  
+	top:30,
+	textAlign:"center",
+	width:"55%",
+	font: {
+		fontFamily: Alloy.Globals.lightFont,
+		fontSize: 14
+	}
+}
+
+"#scroller" : {}
+".topBarTop" : {
+	height: Alloy.Globals.btclnTopBarHeight,
+	width: "100%", 
+}
+
+".refresh" : {
+	width: 25,
+	height: 25,
+	top: 28,
+	margin: 10
+}
+".refresh[if=Alloy.Globals.isiPhoneX]" : {
+	top: 41
+}
+".refresh[platform=android]" : {
+	top: 12
+}
+".addToken" : {
+	top: 21,
+	left: 5,
+	width: 50,
+	height: '100%'
+}
+".addToken[if=Alloy.Globals.isiPhoneX]" : {
+	top: 33
+}
+".addToken[platform=android]" : {
+	top: 9
+}
+".addTokenIcon" : {
+	width: 25,
+	height: 25
+}
+".addTokenLabel" : {
+	top: 2,
+	color: 'white',
+	width: '100%'
+}
+".topBarBottom" : {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	backgroundColor:"transparent"
+}
+".topBarTab" : {
+	width: "24.9%",
+	height: "100%",
+	backgroundColor: "transparent"
+}
+"#connecting" : {
+	visible: true,
+	indicatorColor: "#454647",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	style: Ti.UI.ActivityIndicatorStyle.BIG, 
+}
+ 
+"#globeIcon":{
+	bottom:10,
+	left:10,
+	width:40, 
+} 
+
+"#bluetoothIcon":{
+	top:20, 
+	width:10, 
+	visible:false
+} 
+
+"#networkIcon":{
+	top:20,
+	left:10,
+	width:30, 
+}  
+
+"#depositButton":{
+	right: 10,
+	color: "black",
+	font: Alloy.Globals.buttonFont,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+	top:20
+}
+
+"#depositButton[if=Alloy.Globals.isiPhoneX]" : {
+	top: 30
+}
+
+
+
+
+"#statusLabel":{
+    textAlign:"center",
+    color:Alloy.Globals.nayutaDark,
+    top:10,
+    opacity:0.4,
+    font: {
+		fontSize: 15,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#centerButton":{
+    layout:"horizontal",
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE
+}
+"#valueLabel":{
+    top:10,
+    width:Ti.UI.SIZE,
+    height:70, 
+    textAlign:"center",
+    color:Alloy.Globals.nayutaDark,
+    font: {
+		fontSize: 20,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+"#percentageLabel":{
+    top:0,
+    width:Ti.UI.SIZE, 
+    height:70,
+    textAlign:"center",
+    color:Alloy.Globals.nayutaDark,
+    font: {
+		fontSize: 18,
+		fontFamily: Alloy.Globals.lightFont
+	}
+}
+
+"#smallSync":{ 
+	top: 32,
+	left: 20,
+	layout:"horizontal",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	visible:false
+}
+
+"#smallSync[if=Alloy.Globals.isiPhoneX]":{ 
+	top: 42,
+}
+
+"#smallSyncSpinner":{ 
+	visible: true,
+	indicatorColor: "#454647",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}
+
+"#smallSyncLabel":{ 
+	left:10,
+	font: {
+	  fontFamily: Alloy.Globals.lightFont,
+	  fontSize: 16
+  	}
+}
+
+"#centerControls":{
+   width:Ti.UI.SIZE,
+   height:Ti.UI.SIZE,
+   layout:"vertical",
+   visible:false,
+}
+
+"#fullnodeIcon": {
+  top: 65, 
+  color: Alloy.Globals.themeColor,
+  font: {
+	  fontFamily: Alloy.Globals.lightFont,
+	  fontSize: 12
+  },
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  visible:false
+}
