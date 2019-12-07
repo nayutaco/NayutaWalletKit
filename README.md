@@ -1,5 +1,7 @@
 # NayutaWalletKit
 
+[![Build Status](https://travis-ci.org/NayutaWalletKit/NayutaWalletKit.svg?branch=master)](https://travis-ci.org/NayutaWalletKit/NayutaWalletKit)
+
 Developed using Appcelerator Titanium Alloy SDK with custom native iOS and Java libraries.
 
 Alloy allows app development in Javascript which can cross compile into iOS and Android mobile applications.
