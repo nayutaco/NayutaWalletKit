@@ -105,3 +105,7 @@ Goolge drive linking won't work as you would need to register the app your self 
 # Attributes
  "https://www.freepik.com/free-photos-vectors/business" - Business vector created by freepik - www.freepik.com
  "https://www.freepik.com/free-photos-vectors/background" - Background vector created by pikisuperstar - www.freepik.com
+ 
+# License
+
+The source code of NayutaWalletKit can be freely modified and redistributed under the Apache License, Version 2.0, excluding Nayuta (our name), Nayuta Wallet (the app name), Nayuta logo and trademark.
