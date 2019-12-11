@@ -31,6 +31,7 @@ jobs:
         - NODE_VERSION="8.16.0" 
         - PLATFORM="android"
       before_install:
+        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
         - openssl aes-256-cbc -K $encrypted_69300d0764ac_key -iv $encrypted_69300d0764ac_iv -in tiapp.xml.enc -out tiapp.xml -d
         # Set up KVM
         - sudo adduser $USER libvirt
@@ -102,7 +103,6 @@ jobs:
         # - gulp 'config:tiapp' --test
 
       script: 
-        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
         - mocha tests.js
 
     - stage: ios
