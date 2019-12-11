@@ -102,6 +102,7 @@ jobs:
         # - gulp 'config:tiapp' --test
 
       script: 
+        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
         - mocha tests.js
 
     - stage: ios
@@ -140,4 +141,5 @@ jobs:
       before_script: 
 
       script:
+        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
         - mocha tests.js
