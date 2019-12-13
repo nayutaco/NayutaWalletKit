@@ -94,14 +94,14 @@
                </View>
 
 
-			   <View class="option" id="signOut" onClick="signOut">
+			   <!-- View class="option" id="signOut" onClick="signOut">
                   <View class="optionBackground" />
                   <View class="optionLabels">
                      <Label class="optionLabel">sign out</Label>
                      <Label class="optionDescription">dev only</Label>
                   </View>
                   <ImageView class="optionButton"  image="/images/signOutIcon.png"/>
-               </View>
+               </View-->
 
   
 					<Label id="version" class="size10 gray description" />
