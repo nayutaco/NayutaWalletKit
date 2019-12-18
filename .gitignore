@@ -8,7 +8,6 @@ tmp
 .project
 .settings
 .metadata
-tiapp.xml
 Thumbs.dbtiapp.xml
 demoLND.txt
 demoLNDConnect.txt

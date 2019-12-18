@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <guid>82ba513a-7d0d-4434-94a6-3d1eeab8e3df</guid>
+  <id>co.nayuta.wallet</id>
+  <name>Nayuta</name>
+  <version>0.0.1</version>
+  <publisher>Nayuta</publisher>
+  <url>https://nayuta.com</url>
+  <description>nayuta</description>
+  <copyright>2019 by Nayuta</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>true</fullscreen>
+  <navbar-hidden>true</navbar-hidden>
+  <analytics>false</analytics>
+  <ios>
+    <log-server-port>2984</log-server-port>
+    <enable-launch-screen-storyboard>false</enable-launch-screen-storyboard>
+    <use-app-thinning>true</use-app-thinning>
+    <plist>
+      <dict>
+        <key>CFBundleDevelopmentRegion</key>
+        <string>en</string>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>CFBundleURLTypes</key>
+        <array>
+          <dict>
+            <key>CFBundleURLName</key>
+            <string>co.nayuta.wallet</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+              <string>lightning</string>
+            </array>
+          </dict>
+          <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>co.nayuta.wallet</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+              <string>apps.googleusercontent.com.800512938574-t17qvvb1t9l3t34t8kdr0ctcprhfuva4</string>
+              <string>com.googleusercontent.apps.800512938574-fovfeiii3ceaplud7p92an7lhpepd6ta</string>
+              <string>com.googleusercontent.apps.554903734290-8aol00rs5e9ot1k07jejjklhdqgesp6c</string>
+            </array>
+          </dict>
+        </array>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+          <string>lightning</string>
+        </array>
+        <key>NSFaceIDUsageDescription</key>
+        <string>For authorization</string>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>CFBundleSupportedPlatforms</key>
+        <array>
+          <string>iPhoneOS</string>
+        </array>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>appicon.png</string>
+          <string>appicon@2x.png</string>
+          <string>appicon-120.png</string>
+          <string>appicon-60.png</string>
+          <string>appicon-60@2x.png</string>
+          <string>appicon-60@3x.png</string>
+          <string>appicon-72.png</string>
+          <string>appicon-72@2x.png</string>
+          <string>appicon-76.png</string>
+          <string>appicon-76@2x.png</string>
+          <string>appicon-Small-40.png</string>
+          <string>appicon-Small-40@2x.png</string>
+          <string>appicon-Small-40@3x.png</string>
+          <string>appicon-Small-50.png</string>
+          <string>appicon-Small-50@2x.png</string>
+          <string>appicon-Small.png</string>
+          <string>appicon-Small@2x.png</string>
+          <string>appicon-Small@3x.png</string>
+        </array>
+        <key>UIBackgroundModes</key>
+        <array>
+          <string>fetch</string>
+        </array>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>This app requires access to the Photo library.</string>
+        <key>NSCameraUsageDescription</key>
+        <string>In order to scan payment requests</string>
+        <key>NSAppleMusicUsageDescription</key>
+        <string>This app requires access to the AppleMusic.</string>
+        <key>NSLocationAlwaysUsageDescription</key>
+        <string>Required for frameworks to work correctly</string>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>Required for frameworks to work correctly</string>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:versionCode="1" android:versionName="0.0.1" 
+      xmlns:tools="http://schemas.android.com/tools">
+      <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28"/>
+      <application android:allowBackup="false" android:debuggable="false" android:hardwareAccelerated="true" tools:replace="android:icon">
+        <activity android:name="org.appcelerator.titanium.TiActivity" android:theme="@style/Theme.NayutaTheme"/>
+        <activity android:name=".IntentActivity">
+          <intent-filter>
+            <action android:name="android.intent.action.SEND"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="lightning"/>
+          </intent-filter>
+          <intent-filter>
+            <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <data android:mimeType="text/plain"/>
+          </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.mandelduck.androidcore.RPCIntentService"/>
+        <service android:exported="false" android:name="com.mandelduck.androidcore.ABCoreService"/>
+        <service android:name="com.mandelduck.androidcore.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="true" android:name="com.mandelduck.lnbluetooth.UartService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiActivity" android:theme="@style/Theme.NayutaTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@style/Theme.NayutaTheme"/>
+        <activity android:label="code_scanner" android:name="com.mandelduck.qrcodescanner.CodeScannerActivity"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <service android:name="co.nayuta.wallet.gcm.RegistrationIntentService" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true">
+          <intent-filter>
+            <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+          </intent-filter>
+        </receiver>
+        <!-- Only add the GCM-related tags if you are using push notifications as well -->
+        <service android:name="co.nayuta.wallet.gcm.GcmIntentService" android:exported="false">
+          <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+          </intent-filter>
+        </service>
+        <service android:name="co.nayuta.wallet.gcm.GcmIntentService" android:exported="false">
+          <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.SEND"/>
+          </intent-filter>
+        </service>
+        <service android:name="co.nayuta.wallet.gcm.GcmIDListenerService" android:exported="false">
+          <intent-filter>
+            <action android:name="com.google.android.gms.iid.InstanceID"/>
+          </intent-filter>
+        </service>
+      </application>
+      <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+      <uses-permission android:name="android.permission.WAKE_LOCK"/>
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.VIBRATE"/>
+      <uses-permission android:name="android.permission.CAMERA"/>
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+      <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+      <uses-permission android:name="android.permission.NFC"/>
+    </manifest>
+  </android>
+  <modules>
+    <module platform="android">ti.identity</module>
+    <module platform="iphone">ti.identity</module>
+    <module platform="android">ti.barcode</module>
+    <module platform="iphone">ti.barcode</module>
+    <module platform="android">hyperloop</module>
+    <module platform="iphone">hyperloop</module>
+    <module platform="android">ti.playservices</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="ipad">false</target>
+    <target device="iphone">true</target>
+  </deployment-targets>
+  <sdk-version>8.1.0.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+  </plugins>
+  <property name="run-on-main-thread" type="bool">true</property>
+  <property name="ti.ui.defaultunit" type="string">dip</property>
+  <property name="googleClientID{REMOVETHIS}" type="string">ADDYOUROWN</property>
+  <property name="googleClientIDDev{REMOVETHIS}" type="string">ADDYOUROWN</property>
+  <!--custom urls for alternative api-->
+  <property name="useAlternativeAPI" type="bool">false</property>
+  <property name="altPublicKeyTestnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
+  <property name="altPublicKeyMainnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
+  <property name="altPeerTestnet" type="string">btcd-testnet.lightning.computer</property>
+  <property name="altPeerMainnet" type="string">btcd-mainnet.lightning.computer</property>
+  <property name="altFeeUrlTestnet" type="string">https://nodes.lightning.computer/fees/v1/btctestnet-fee-estimates.json</property>
+  <property name="altFeeUrlMainnet" type="string">https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json</property>
+  <property name="altBlockHeightAPITestnet" type="string">https://api.blockcypher.com/v1/btc/test3</property>
+  <property name="altBlockHeightAPIMainnet" type="string">https://api.blockcypher.com/v1/btc/main</property>
+  <property name="logLevel" type="string">debug</property>
+  <property name="reorgThreshold" type="int">6</property>
+  <guid>e7726af5-30a3-43ac-9555-b80c735a7470</guid>
+  <!-- need to add your own value-->
+  <property name="appc-app-id" type="string">5df9c711cde813560977f9f0</property>
+</ti:app>
