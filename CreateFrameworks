@@ -32,7 +32,8 @@ cd $GOPATH/src/github.com/lightningnetwork/lnd
 
 echo "Checkout to latest rc tag"
 
-#git checkout tags/v0.8.0-beta-rc3
+git checkout tags/v0.8.1-beta
+go install .
 
 echo "Creating ios lndmobile..."
 
