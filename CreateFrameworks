@@ -35,6 +35,11 @@ echo "Checkout to latest rc tag"
 git checkout tags/v0.8.1-beta
 go install .
 
+go get -d github.com/lightninglabs/falafel
+cd $GOPATH/src/github.com/lightninglabs/falafel
+git checkout -b v0.5 2ae8f0e6bebe97ca68f7d7b99b5313de8f1c5d1b
+go install .
+
 echo "Creating ios lndmobile..."
 
 make ios tags="wtclientrpc" 
