@@ -39,9 +39,9 @@ echo "Creating ios lndmobile..."
 make ios tags="wtclientrpc" 
 
 echo "Creating android lndmobile..."
-make android tags="wtclientrpc" 
+#make android tags="wtclientrpc" 
 
-cp -r mobile/build/android/Lndmobile.aar $cwd/app/platform/android
+#cp -r mobile/build/android/Lndmobile.aar $cwd/app/platform/android
 cp -r mobile/build/ios/Lndmobile.framework $cwd/app/platform/ios
 cp -r mobile/build/ios/Lndmobile.framework $cwd2/lnGRPCWrapper
 cd $cwd;
