@@ -2,7 +2,7 @@
 
 DIR_SIMULATOR="/build/Debug-iphonesimulator"
 DIR_DEVICE="/build/Debug-iphoneos"
-NAYUTA_DIR="../nayuta/app/platform/ios"
+NAYUTA_DIR="../NayutaWalletKit/app/platform/ios"
 
 
 echo "getting ioscrypto..."
