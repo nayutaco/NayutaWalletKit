@@ -30,8 +30,7 @@ jobs:
         - PATH=${ANDROID_HOME}:${ANDROID_HOME}/emulator:${TOOLS}:${TOOLS}/bin:${ANDROID_HOME}/platform-tools:${PATH}
         - NODE_VERSION="8.16.0" 
         - PLATFORM="android"
-      before_install:
-        - openssl aes-256-cbc -K $encrypted_69300d0764ac_key -iv $encrypted_69300d0764ac_iv -in tiapp.xml.enc -out tiapp.xml -d
+      before_install: 
         # Set up KVM
         - sudo adduser $USER libvirt
         - sudo adduser $USER kvm
