@@ -29,7 +29,7 @@
                 </array>
                 <key>CFBundleURLTypes</key>
                 <array>
-                    <dict>
+                    <dict> 
                         <key>CFBundleURLName</key>
                         <string>co.nayuta.wallet</string>
                         <key>CFBundleURLSchemes</key>
