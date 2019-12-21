@@ -82,11 +82,11 @@ xcodebuild clean -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme l
 
 echo "Building lnGRPCWrapper for simulator..."
 
-xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../lnGRPCWrapper/build
+xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../lnGRPCWrapper/build -quiet
  
 echo "Building lnGRPCWrapper for device..."
 
-xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphoneos -destination generic/platform=iOS SYMROOT=$(PWD)/../lnGRPCWrapper/build > /dev/null
+xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphoneos -destination generic/platform=iOS SYMROOT=$(PWD)/../lnGRPCWrapper/build -quiet
 
 echo "Creating FAT libraries..."
 
