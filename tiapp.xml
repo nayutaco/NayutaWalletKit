@@ -208,7 +208,7 @@
     <property name="run-on-main-thread" type="bool">true</property>
     <property name="ti.ui.defaultunit" type="string">dip</property>  
     <!--custom urls for alternative api-->
-    <property name="useAlternativeAPI" type="bool">false</property>
+    <property name="useAlternativeAPI" type="bool">true</property>
     <property name="altPublicKeyTestnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
     <property name="altPublicKeyMainnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
     <property name="altPeerTestnet" type="string">btcd-testnet.lightning.computer</property>
