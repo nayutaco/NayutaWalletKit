@@ -82,7 +82,7 @@ xcodebuild clean -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme l
 
 echo "Building lnGRPCWrapper for simulator..."
 
-xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../lnGRPCWrapper/build > /dev/null
+xcodebuild -workspace ../lnGRPCWrapper/lnGRPCWrapper.xcworkspace -scheme lnGRPCWrapper -configuration Debug -sdk iphonesimulator SYMROOT=$(PWD)/../lnGRPCWrapper/build
  
 echo "Building lnGRPCWrapper for device..."
 
