@@ -27,8 +27,12 @@ cd ..
 cwd2=$(pwd)
 
 cd lnGRPCWrapper
-pod install
 
+echo "checking lnGRPCWrapper out to correct commit"
+git checkout 9d14c98bae97bff79ff298d4b731660de347440a
+
+pod install
+ 
 cd $GOPATH/src/github.com/lightningnetwork/lnd
 
 echo "Checkout to latest rc tag"
