@@ -31,7 +31,6 @@ jobs:
         - NODE_VERSION="8.16.0" 
         - PLATFORM="android"
       before_install:
-        - openssl aes-256-cbc -K $encrypted_69300d0764ac_key -iv $encrypted_69300d0764ac_iv -in tiapp.xml.enc -out tiapp.xml -d
         # Set up KVM
         - sudo adduser $USER libvirt
         - sudo adduser $USER kvm
@@ -114,7 +113,6 @@ jobs:
       env: 
         - NODE_VERSION="8.16.0" PLATFORM="ios" ENVIRONMENT=travis
       before_install:
-        - openssl aes-256-cbc -K $encrypted_69300d0764ac_key -iv $encrypted_69300d0764ac_iv -in tiapp.xml.enc -out tiapp.xml -d
         - nvm install $NODE_VERSION 
         - export GOPATH=/Users/travis/go
         - export PATH=$GOPATH/bin:$PATH 
