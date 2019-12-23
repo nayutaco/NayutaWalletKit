@@ -148,7 +148,7 @@
   <string name="label_settings_connect_btcpay_lnd_description">connect to your remote BTCPay or LND instance</string>
   <string name="language">en</string>
   <string name="label_or">or</string>
-  <string name="appname">Nayuta</string>
+  <string name="appname">NayutaWalletKit</string>
 
 
   <string name="channels_funds_option">deposit/channels</string>

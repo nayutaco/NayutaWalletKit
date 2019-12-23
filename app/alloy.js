@@ -10,20 +10,20 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-Alloy.Globals = { 
-  copyright: '© 2019 Nayuta',
-  defaultExpiry :10,
-  recoveryWindow :250, 
-  slowFee:100,
-  medFee:5,
-  fastFee:2,
-  feeLimitPercentage:20,
-  defaultFeeLimit:-1,
-  cacheVersion:"V2",
-  cacheOn:true, // cache start up requests
-  logLevel:Ti.App.Properties.getString("logLevel", "none"),
-  enableLiveView:false, // set this to enable liveview by not loading hyperloop modules (which break live view
-  useBackUpAPI:false
+Alloy.Globals = {
+  copyright: '© 2019 NayutaWalletKit',
+  defaultExpiry: 10,
+  recoveryWindow: 250,
+  slowFee: 100,
+  medFee: 5,
+  fastFee: 2,
+  feeLimitPercentage: 20,
+  defaultFeeLimit: -1,
+  cacheVersion: "V2",
+  cacheOn: true, // cache start up requests
+  logLevel: Ti.App.Properties.getString("logLevel", "none"),
+  enableLiveView: false, // set this to enable liveview by not loading hyperloop modules (which break live view
+  useBackUpAPI: false
 };
 
 Alloy.Globals.accountsKey = "AccountsV1";

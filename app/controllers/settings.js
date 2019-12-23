@@ -18,7 +18,7 @@ var version =
   Ti.App.version +
   (Alloy.CFG.isDevelopment ? " dev" : "") +
   "\n\n" +
-  "(c) 2019 Nayuta";
+  "(c) 2019 NayutaWalletKit";
 
 $.version.text = version;
 
