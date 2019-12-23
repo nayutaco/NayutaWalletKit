@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <guid>82ba513a-7d0d-4434-94a6-3d1eeab8e3df</guid>
     <id>co.nayuta.wallet</id>
     <name>Nayuta</name>
-    <version>0.0.26</version>
+    <version>0.0.27</version>
     <publisher>Nayuta</publisher>
     <url>https://nayuta.com</url>
     <description>nayuta</description>
@@ -30,7 +29,7 @@
                 </array>
                 <key>CFBundleURLTypes</key>
                 <array>
-                    <dict>
+                    <dict> 
                         <key>CFBundleURLName</key>
                         <string>co.nayuta.wallet</string>
                         <key>CFBundleURLSchemes</key>
@@ -106,7 +105,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="26" android:versionName="0.0.26" xmlns:tools="http://schemas.android.com/tools">
+        <manifest android:versionCode="27" android:versionName="0.0.27" xmlns:tools="http://schemas.android.com/tools">
             <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28"/>
             <application android:allowBackup="false"
                 android:debuggable="false"
@@ -207,11 +206,9 @@
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
     <property name="run-on-main-thread" type="bool">true</property>
-    <property name="ti.ui.defaultunit" type="string">dip</property> 
-    <property name="googleClientID" type="string">800512938574-fovfeiii3ceaplud7p92an7lhpepd6ta.apps.googleusercontent.com</property>
-    <property name="googleClientIDDev" type="string">554903734290-8aol00rs5e9ot1k07jejjklhdqgesp6c.apps.googleusercontent.com</property>
+    <property name="ti.ui.defaultunit" type="string">dip</property>  
     <!--custom urls for alternative api-->
-    <property name="useAlternativeAPI" type="bool">false</property>
+    <property name="useAlternativeAPI" type="bool">true</property>
     <property name="altPublicKeyTestnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
     <property name="altPublicKeyMainnet" type="string">02d39b72e7869181912e0c1461c7aaba390c5a07ceb3d2c2a2b22d9ad0fa0933ea</property>
     <property name="altPeerTestnet" type="string">btcd-testnet.lightning.computer</property>
@@ -220,7 +217,7 @@
     <property name="altFeeUrlMainnet" type="string">https://wallet.nayuta.co/wallet/api/v1/estimatefee</property>
     <property name="altBlockHeightAPITestnet" type="string">https://api.blockcypher.com/v1/btc/test3</property>
     <property name="altBlockHeightAPIMainnet" type="string">https://api.blockcypher.com/v1/btc/main</property>
-    <property name="logLevel" type="string">debug</property>
+    <property name="logLevel" type="string">none</property>
     <property name="reorgThreshold" type="int">6</property>
     <property name="logUrl" type="string">ws://nameless-castle-55976.herokuapp.com</property>
     <guid>40e4e56d-7fa6-4270-9222-ef8687d8dcea</guid>
